@@ -1,16 +1,222 @@
 ---
+import Layout from "../components/Layout.astro";
+import Tarjetas from "../components/Cards.astro"
+import Seguridad from "../components/big-card.astro"
+import Ventajas from "../components/Cards-ventajas.astro"
+import Ofertas from "../components/Offers.astro"
+import Precios from "../components/Pricing.astro"
+import Personalizada from "../components/text-with-card.astro"
+
 
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout>
+    <main class="main__container">
+        <div class="main__header">
+            <div class="hero__text">
+                <span>Mejora la conversión</span>
+                <h1>Páginas webs que hacen click siempre con tu audiencia.</h1>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos harum delectus reprehenderit dolorem quisquam optio adipisci sequi veritatis commodi nesciunt? dolorem quisquam.</p>
+                <button>COMIENZA YA</button>
+                <span>Accede a un público de miles de personas, proporciona información a tus clientes.</span>
+            </div>
+            <div class="hero__img">
+                <figure>
+                    <img src="../../public/img/computadoras.svg" alt="Dispositivos con una web abierta">
+                </figure>
+            </div>
+        </div>
+    </main>
+
+<!-- Sección introducción -->
+
+<section class="seccion__introduccion">
+    <figure>
+        <img src="../../public/img/left-wing.svg" alt="rectángulo">
+    </figure>
+    <figure>
+        <img src="../../public/img/right-wing.svg" alt="rectángulo">
+
+    </figure>
+        <h2>Construye el equipo ideal para llegar a tu cliente</h2>
+        <figure class="princ-img">
+            <img src="../../public/img/personas-comprando.svg" alt="personas comprando">
+        </figure>
+        <p>Use this long-form section to really paint a picture of the before and after. What’s the problem you’re solving? What’s the benefit people are getting? For example, if you’re hosting a webinar about how to collect leads for an online business, describe the struggle of trying to find and convert prospects—then explain how your webinar is gonna help make it easier.</p>
+        <div class="buttons">
+            
+            <button>Contactanos</button>
+            <button>Ver planes</button>
+        
+        </div>
+    </section>
+
+    <!-- Sección características -->
+    
+    <Tarjetas></Tarjetas>
+    <Seguridad></Seguridad>
+
+    <!-- Sección Ventajas -->
+
+    <seccion class="seccion__ventajas">
+        <div class="mensaje">
+            <h3>La conexión con el cliente se construye a través de la <b>comunicación</b></h3>
+            <p>La información concisa de una página web permite a tu cliente entender con mayor facilidad <b>el mensaje que buscas que reciba.</b></p>
+        </div>
+        <Ventajas>
+
+        </Ventajas>
+    </seccion>
+    
+    <Ofertas></Ofertas>
+
+    <Precios></Precios>
+
+    <Personalizada></Personalizada>
+</Layout>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
+    :root{
+        --light-cian: #97E9FF;
+        --span-font: 'Hubballi', sans-serif;
+    }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 500rem;
+}
+    .main__container{
+        color: #fff;
+        background: var(--strong-blue);
+        padding-top: 0.1px;
+    }
+    .main__header{
+        display: flex;
+        width: 80%;
+        padding: 1rem 0 10rem 0;
+        margin: 7rem auto;
+    }
+    .main__header .hero__text :first-child(){
+        color: var(--light-cian);
+        font-size: 1.4rem;
+        text-transform:uppercase;
+        font-family: var(--span-font);
+    }
+    .hero__text{
+        width: 57rem;
+    }
+    .hero__text p{
+        width: 80%;
+        font-size: 1.2rem;
+        margin: 3rem 0 1rem 0;
+    }
+    .hero__text button{
+        display: block;
+        color: #fff;
+        background: rgba(73, 113, 244, 0.60);
+        border: none;
+        padding: 1.5rem;
+        margin: 2rem 0 1.4rem 1.8rem;
+        width: 17rem;
+        border-radius: 19px;
+        font-size: 1.2rem;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    .main__header figure{
+        display: flex;
+        height: 100%;
+        align-items: center;
+    }
+    .main__header img{
+        width: 100%;
+    }
+    .main__header h1{
+        font-size: 3.3rem;
+        margin: 1.6rem 0 1rem 0;
+    }
+    .hero__text :last-child{
+        font-size: 1rem;
+        width: 50%;
+        display: block;
+    }
+
+/* Sección de introducción */
+
+
+.seccion__introduccion{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    flex-direction: column;
+    align-items: center;
+}
+.seccion__introduccion :first-child :first-child{
+    left: 0;
+    position: absolute;
+    transform: translateY(2rem);
+
+}
+.seccion__introduccion :nth-child(2) :first-child{
+    position:absolute;
+    right: 0rem;
+    transform: translateY(7rem);
+}
+.seccion__introduccion h2{
+    font-size: 2.4rem;
+    margin: 2.4rem 0 3rem 0;
+    color: #333;
+}
+.princ-img img{
+    width: 70%;
+    display: block;
+    margin: auto;
+}
+.seccion__introduccion p{
+    margin-top: 2rem;
+    color: #7C7A7A;
+    width: 70%;
+    font-size: 1.2rem;
+}
+
+.buttons button{
+    margin: 2rem 0.5rem 7rem 0.5rem;
+    border: none;
+    color: #fff;
+}
+.buttons :first-child{
+    background: #1C2B5C;
+    font-size: 1rem;
+    padding: 0.8rem 2rem;
+}
+.buttons :nth-child(2){
+    background: #2E69D7;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+}
+.seccion__ventajas{
+    display: flex;
+    background: #00295B;
+    margin-top: 20vh;
+    padding: 8rem;
+    flex-direction: column;
+}
+.mensaje{
+    display: flex;
+    width: 70vw;
+    position: relative;
+    z-index: 200;
+    gap: 10vw;
+    margin: 0 auto 10vh auto;
+    justify-content: center;
+    color: #fff;
+}
+.mensaje h3{
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 40vw;
+}
+</style>

@@ -1,0 +1,90 @@
+---
+import caracteristicas from "../config/caracteristicas.json"
+---
+
+<section class="caracteristicas">
+
+    <h3>Nuestras ofertas te permiten</h3>
+        <figure class="Patron-de-cuadrados">
+            <img src="../../public/img/cuadratics-patterns.svg" alt="Patron de cuadrados">
+        </figure>
+        <div class="char__cards">
+            {
+                caracteristicas.map((caracteristica)=>(
+                    <div class="card">
+                        <h4>{caracteristica.title}</h4>
+                        <p>{caracteristica.content}</p>
+                        <figure>
+                            <img src={caracteristica.img}>
+                        </figure>
+                    </div>
+                ))
+            }
+    </div>
+
+</section>
+
+
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.caracteristicas .Patron-de-cuadrados img{
+    position: absolute;
+    right: 0;
+    transform: translateY(-15rem);
+}
+.caracteristicas h3{
+    font-size: 1.8rem;
+    margin-bottom: 3rem;
+    color: #00295B;
+}
+.caracteristicas{
+    width: 70rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+.char__cards{
+    display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   grid-template-rows: 29rem 29rem;
+   gap: 1rem;
+   
+}
+.card{
+    border: 1px solid #EFEFEF;
+    position: relative;
+    z-index: 100;
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    width: 19rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1.5rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+}
+.card figure{
+    width: 50%;
+}
+.card img{
+    width: 100%;
+}
+
+.card h4{
+    width: 90%;
+    color: #1C2B5C;
+    font-size: 1.5rem;
+}
+.card p{
+    width: 90%;
+    font-weight: 300;
+}
+</style>

@@ -1,0 +1,176 @@
+<div class="section__pricing">
+    <h3>Precios</h3>
+    <p>Encuentra el plan que mejor se ajuste a tu ambición</br>
+        Las webs no solo varían en forma, sino también en finalidad ¡escoge la tuya!</p>
+        <div class="price__boxes">
+            <div class="little__boxes first">
+                <h4>Básico</h4>
+                <figure class="img-1">
+                    <img src="/img/Landing3_img.png">
+                </figure>
+                <figure class="img-2">
+                    <img src="/img/landing-200-2.png">
+                </figure>
+                <div class="line"></div>
+                <p>Texto es minimalista, la llamada a la acción en el encabezado, condensa la información esencial para lograr tu objetivo.</p>
+                <div class="box__buttons">
+                <input type="button" value="Ver Plantillas" id="click_Bas">
+                </div>
+            </div>
+            <div class="little__boxes second">
+                <h4>Medio</h4>
+                <figure class="img-1">
+                    <img src="/img/500-preview-2.png">
+                </figure>
+                <figure class="img-2">
+                    <img src="/img/500-preview.png">
+                </figure>
+                <div class="line"></div>
+                <p>Permite mayor cantidad de información, puedes informar sobre los beneficios o características de tu producto o servicio.</p>
+                <div class="box__buttons">
+                <input type="button" value="Ver Plantillas" id="click_Med">
+                </div>
+            </div>
+            <div class="little__boxes third">
+                <h4>Avanzado</h4>
+                <figure class="img-1">
+                    <img src="/img/1millon-preview-1.png">
+                </figure>
+                <figure class="img-2">
+                    <img src="/img/1-millon-preview.png">
+                </figure>
+                <div class="line"></div>
+                <p>Haz que el usuario conozca cada detalle sobre tu operación a través de imágenes, textos y gráficos esenciales para tu imagen empresarial.</p>
+                <div class="box__buttons">
+                <input type="button" value="Ver Plantillas" id="click_Ava">
+                </div>
+            </div>
+        </div>
+    </div>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .section__pricing{
+    display: flex;
+    padding: 5vh 0;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    width: 100%;
+    background-color: #212121;
+    margin: 13vh auto;
+}
+.section__pricing > * {
+    padding: 0.4rem;
+}
+.section__pricing h3{
+    font-size: 2.5rem;
+    margin-bottom: 0.3rem;
+}
+.section__pricing p{
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+.price__boxes{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+    gap: 2vw;
+}
+.img-1, .img-2{
+    width: 15rem;
+    position: absolute;
+}
+.img-1 img, .img-2 img{
+    width: 100%;
+}
+.img-1{
+    translate: -1.2rem -8rem;
+}
+.img-2{
+    /* translate: 0.7rem -rem; */
+}
+.little__boxes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 23rem;
+    height: 66vh;
+    color: #000;
+    background-color: #fff;
+    border-radius: 9px;
+}
+.first p{
+    padding-bottom: 0.6rem;
+}
+.first, .third{
+    padding-top: 0.9rem;
+}
+.little__boxes p{
+    font-size: 1rem;
+    font-weight: 300;
+    width: 20vw;
+    text-align: center;
+}
+.little__boxes h4{
+    font-size: 1.8rem;
+    color: #1C2B5C;
+}
+.box__buttons{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+.box__buttons input{
+    padding: 0.8rem;
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    width: 12vw;
+    color: #1C2B5C;
+    border-radius: 7px;
+    box-shadow: #a1a1a1 0 2px;
+}
+.box__buttons :first-child{
+    background-color: #2E69D7;
+    color: #DCDCDC;
+    box-shadow: none;
+}
+.box__buttons input:hover{
+    cursor: pointer;
+}
+.little__boxes:hover{
+    border: #1C2B5C 3px solid ;
+}
+.box__buttons :first-child:hover{
+    background: rgb(26, 85, 190);
+    font-size: 17px;
+    padding: 9px 7px;
+}
+.box__buttons :last-child:hover{
+    font-size: 17px;
+    padding: 9px 7px;
+}
+.line{
+    width: 80%;
+    border: 1px solid #1C2B5C;
+    margin: 36vh 0 1.2rem 0;
+}
+.second.line{
+    border: #fff 1px solid;
+}
+.second{
+    background:#090071;
+    color: #fff;
+}
+.second h4{
+    color: #fff;
+}
+</style>

@@ -1,0 +1,114 @@
+
+
+
+
+<section class="section__trust">
+    <div class="trust-card">
+        <div class="card-text">
+            <h3>Todo en uno: navegación, contraseñas y archivos seguros</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor. Lorem ipsum dolor sit amer. Lorem ipsum dolor sit amer . Lorem ipsum dolor sit amer. Lorem ipsum dolor sit amer</p>
+            <button>Explorar más</button>
+        </div>
+        <div class="card-img">
+            <figure>
+                <img src="../../public/img/laptop.svg" alt="Laptop con web">
+            </figure>
+        </div>
+        <div class="feature la1">
+            <figure>
+                <img src="../../public/img/candado.svg" alt="Candado">
+            </figure>
+            <span>Seguridad</span>
+        </div>
+        <div class="feature la2">
+            <figure>
+                <img src="../../public/img/check.svg" alt="Green Check">
+            </figure>
+            <span>Garantía</span>
+        </div>
+    </div>
+    <figure class="circles-pattern">
+        <img src="../../public/img/circles-pattern.svg" alt="Patrón de círculos">
+    </figure>
+</section>
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.trust-card{
+    width: 70vw;
+    margin: 7rem auto;
+    display: flex;
+    background: #E2F3FF;
+    border-radius: 20px;
+    padding: 4rem;
+    justify-content: space-around;
+    position: relative;
+    z-index: 100;
+}
+.card-text h3{
+    font-size: 2.2rem;
+    margin-top: 1.5rem;
+    width: 90%;
+    color: #212121;
+}
+.card-text{
+    display: flex;
+    flex-direction: column;
+    width: 35rem;
+    gap: 3rem;
+}
+.card-text p{
+    margin-left: 0.8rem;
+    color:#424242;
+    font-weight: 300;
+}
+.card-img figure img{
+    width: 100%;
+}
+.card-img{
+    width: 40%;
+    display: flex;
+    align-items: center;
+}
+.la1 figure img{
+    width: 80%;
+}
+.la1 span{
+    translate: -0.5rem;
+}
+.card-text button{
+    margin-left: 1rem;
+    width: 10rem;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: #2E69D7;
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.feature{
+    position: absolute;
+    display: flex;
+    width: 9rem;
+    color: #fff;
+    font-weight: 500;
+    background: #3A71FF;
+    border-radius: 15px;
+    gap: 0.5rem;
+    padding: 0.3rem;
+    align-items: center;
+    transform: translateX(33vw) translateY(6rem);
+}
+.la2{   
+    transform: translateX(33vw) translateY(10rem);
+}
+.circles-pattern{
+    position: absolute;
+    transform: translateY(-28rem);
+}
+</style>
