@@ -24,6 +24,55 @@
         </nav>
         <slot></slot>
     </main>
+    <footer>
+        <div class="footer-container">
+            <span>Conversa</span>
+            <div class="footer_sections">
+                <div class="footer-section">
+                    <span class="foot_titulo">Nosotros</span>
+                    <li>Términos y condiciones</li>
+                    <li>Presupuestos</li>
+                    <li>Contacto</li>
+                    <li>Quienes Somos</li>
+                </div>
+                <div class="footer-section">
+                    <span class="foot_titulo">Casos de Uso</span>
+                    <li>Restaurantes</li>
+                    <li>Gimnasios</li>
+                    <li>Portafolios</li>
+                    <li>Seguros</li>
+                </div>
+                <div class="footer-section">
+                    <span>E-Mail</span>
+                    <li>social@conversa.com.py</li>
+                    <span>Teléfono</span>
+                    <li id="tel">+595 973236438</li>
+                </div>
+            </div>
+            <div class="line">
+            </div>
+            <div class="social-icons">
+                <div class="social-icon">
+                    <figure>
+                        <img src="./img/instagram.svg" alt="Instagram">
+                    </figure>
+                    <span>Instagram</span>
+                </div>
+                <div class="social-icon">
+                    <figure>
+                        <img src="./img/facebook.svg" alt="Facebook">
+                    </figure>
+                    <span>Facebook</span>
+                </div>
+                <div class="social-icon">
+                    <figure>
+                        <img src="./img/whatsapp.svg" alt="Whatsapp">
+                    </figure>
+                    <span>Whatsapp</span>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>
 
@@ -40,6 +89,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+        list-style: none;
     }
     
     .logo{
@@ -69,5 +119,60 @@
         .opciones:hover, .contacto:hover{
             cursor: pointer;
         }
-    
+
+        footer{
+            background: #212121;
+            color: #fff;
+            padding: 0.1px;
+        }
+    .footer-container{
+        width: 80rem;
+        margin: 2rem auto;
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-container > span{
+        align-self: flex-start;
+        font-family: var(--Logo-font);
+        font-size: 2rem;
+    }
+    .footer_sections{
+        display: flex;
+        justify-content: space-around;
+    }
+    span.foot_titulo{
+        font-size: 1.4rem;
+        font-weight: 500;
+    }
+    .footer-section{
+        margin-top: 2rem;
+        font-size: 1rem;
+    }
+    .footer-section>*{
+        margin: .4rem;
+    }
+    .social-icons{
+        width: 40rem;
+        margin: auto;
+        display: flex;
+        justify-content: space-around;
+    }
+    .line{
+        margin: 6vh auto;
+        width: 58rem;
+        height: 2px;
+        background: #fff;
+    }
+    .social-icon{
+        display: flex;
+        background-color: #00295B;
+        border-radius: 10px;
+        justify-content: center;
+        width: 12rem;
+        align-items: center;
+        padding: 0.5rem;
+    }
+    .social-icon > * {
+        margin: 0 .5rem;
+    }
     </style>
