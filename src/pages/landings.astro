@@ -1,7 +1,56 @@
 ---
 import Layout from "../components/Layout.astro"
+import Stats from "../components/stats.astro"
 ---
 
 <Layout>
-    <h1>Esta es mi landing page</h1>
+    <main class="hero__landings">
+        <h1>Mejora tus ventas y marca en línea</h1>
+        <div class="hero__sections">
+            <figure>
+                <img src="./img/main-img-landings.svg" alt="imagen publicitaria">
+            </figure>
+            <div class="hero__text">
+                <h2>¿Por qué necesitas una web?</h2>
+                <p>Use this long-form section to really paint a picture of the before and after. What’s the problem you’re solving? What’s the benefit people are getting?</p>
+                <span>Explora nuestros productos</span>
+            </div>
+        </div>
+    </main>
+    <Stats></Stats>
 </Layout>
+
+<style>
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.hero__landings{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    width: 93rem;
+    margin: 5vh auto;
+}
+.hero__sections{
+    width: 80rem;
+    display: flex;
+    align-items: top;
+}
+h1{
+    font-size: 3.4rem;
+    margin: 4vh 0;
+}
+.hero__text{
+    margin: 7rem 0 0 1rem;
+    width: 30vw;
+    text-align: left;
+}
+.hero__sections figure img{
+    width: 100%;
+}
+
+</style>
