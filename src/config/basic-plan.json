@@ -1,10 +1,10 @@
 [
     {
         "title": "Vista minimalista.",
-        "sub-title": "Céntrate en el mensaje o la promoción.",
-        "caracteristica-1": "Mayor asequibilidad.",
-        "caracteristica-2": "Enfocado en campañas de marketing.",
-        "caracteristica-3": "Perfecto para descripciones breves, formularios y suscripciones."
+        "subtitle": "Céntrate en el mensaje o la promoción.",
+        "caracteristica1": "Mayor asequibilidad.",
+        "caracteristica2": "Enfocado en campañas de marketing.",
+        "caracteristica3": "Perfecto para descripciones breves, formularios y suscripciones."
     },
     {
         "imagen":"./img/landings/landing-300-1.svg"

@@ -1,7 +1,16 @@
 ---
-import basic from "../config/basic-plan.json";
+import { string } from "astro/zod";
 // import basic from "../config/basic-plan.json";
 // import basic from "../config/basic-plan.json";
+
+interface PlantillasInt {
+    title: string,
+    subtitle: string,
+    caracteristica1: string,
+    caracteristica2: string,
+    caracteristica3: string,
+    imagen: string
+}
 ---
 
 
@@ -9,15 +18,15 @@ import basic from "../config/basic-plan.json";
     <div class="choose">
         <h3>Descubre cual es para vos</h3>
         <div class="prices">
-            <span>300 mil</span>
-            <span>500 mil</span>
-            <span>1 Millón</span>
+            <span id="uno">300 mil</span>
+            <span id="dos">500 mil</span>
+            <span id="tres">1 Millón</span>
         </div>
         <div class="linea-precios"></div>
     </div>
     <div class="presentacion">
         <div class="pres-text">
-            <h4>Vista minimalista.</h4>
+            <!-- <h4>Vista minimalista.</h4>
             <span>Céntrate en el mensaje o la promoción</span>
             <ul>
                 <li>Mayor asequibilidad.</li>
@@ -29,7 +38,7 @@ import basic from "../config/basic-plan.json";
         <figure><img src="./img/landings/landing-300-1.svg" alt="Página web"></figure>
         <figure><img src="./img/landings/landing-300-1.svg" alt="Página web"></figure>
         <figure><img src="./img/landings/landing-300-1.svg" alt="Página web"></figure>
-        <figure><img src="./img/landings/landing-300-1.svg" alt="Página web"></figure>
+        <figure><img src="./img/landings/landing-300-1.svg" alt="Página web"></figure> -->
     </div>
 </section>
 
@@ -92,6 +101,25 @@ import basic from "../config/basic-plan.json";
     }
 </style>
 <script>
-    const html = "Hola";
-    // document.querySelector(".pres-text").innerHTML = html;
+   const Presentacion = document.querySelector(".pres-text") as HTMLDivElement;
+   import basic from "../config/basic-plan.json";
+
+   
+   const btnBas = document.getElementById("uno") as HTMLSpanElement; 
+   const btnMed = document.getElementById("dos") as HTMLSpanElement; 
+   const btnAv = document.getElementById("tres") as HTMLSpanElement;
+   
+   btnBas.addEventListener("click", ()=>{
+    
+    basic.map((plan)=>{
+
+        Presentacion.innerHTML += `
+                <h4>${plan.title}</h4>
+                <span>${plan.subtitle}</span>
+                <li>${plan.caracteristica1}</li>
+                <li>${plan.caracteristica2}</li>
+                <li>${plan.caracteristica3}</li>
+                `
+            })
+        })
 </script>
