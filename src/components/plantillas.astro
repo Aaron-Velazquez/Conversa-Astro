@@ -1,16 +1,14 @@
 ---
-import { string } from "astro/zod";
-// import basic from "../config/basic-plan.json";
-// import basic from "../config/basic-plan.json";
+import { any, string } from "astro/zod";
 
-interface PlantillasInt {
-    title: string,
-    subtitle: string,
-    caracteristica1: string,
-    caracteristica2: string,
-    caracteristica3: string,
-    imagen: string
+export interface Props {
+    Basbool?: boolean,
+    MedBool?: boolean,
+    AvaBool?: boolean
 }
+let Basbool = false;
+import Basic from "../config/basicPlan.json";
+
 ---
 
 
@@ -26,19 +24,30 @@ interface PlantillasInt {
     </div>
     <div class="presentacion">
         <div class="pres-text">
+            {
+                Basbool && Basic.map(
+                    (basico)=>(
+                    <h4>{basico.title}</h4>
+                    <span>{basico.subtitle}</span>
+                    <li>{basico.caracteristica1}</li>
+                    <li>{basico.caracteristica2}</li>
+                    <li>{basico.caracteristica3}</li>
+                )
+                )
+            }
             <!-- <h4>Vista minimalista.</h4>
             <span>Céntrate en el mensaje o la promoción</span>
             <ul>
                 <li>Mayor asequibilidad.</li>
                 <li>Enfocado en campañas de marketing.</li>
                 <li>Perfecto para descripciones breves, formularios y suscripciones.</li>
-            </ul>
+            </ul> -->
         </div>
         <figure><img src="./img/landings/landing-300-1.svg" alt="Página web"></figure>
         <figure><img src="./img/landings/landing-300-1.svg" alt="Página web"></figure>
         <figure><img src="./img/landings/landing-300-1.svg" alt="Página web"></figure>
         <figure><img src="./img/landings/landing-300-1.svg" alt="Página web"></figure>
-        <figure><img src="./img/landings/landing-300-1.svg" alt="Página web"></figure> -->
+        <figure><img src="./img/landings/landing-300-1.svg" alt="Página web"></figure>
     </div>
 </section>
 
@@ -101,25 +110,30 @@ interface PlantillasInt {
     }
 </style>
 <script>
-   const Presentacion = document.querySelector(".pres-text") as HTMLDivElement;
-   import basic from "../config/basic-plan.json";
+   const texto = document.querySelector(".pres-text") as HTMLDivElement;
+   const presentacion = document.querySelector(".presentacion") as HTMLDivElement;
 
-   
-   const btnBas = document.getElementById("uno") as HTMLSpanElement; 
-   const btnMed = document.getElementById("dos") as HTMLSpanElement; 
-   const btnAv = document.getElementById("tres") as HTMLSpanElement;
+import basic from "../config/basicPlan.json";
+const btnBas = document.getElementById("uno") as HTMLSpanElement; 
+const btnMed = document.getElementById("dos") as HTMLSpanElement; 
+const btnAv = document.getElementById("tres") as HTMLSpanElement;
    
    btnBas.addEventListener("click", ()=>{
     
-    basic.map((plan)=>{
+    alert("Basbool")
+    // Basbool.value = true;
+    
+    // basic.map((plan)=>{
 
-        Presentacion.innerHTML += `
-                <h4>${plan.title}</h4>
-                <span>${plan.subtitle}</span>
-                <li>${plan.caracteristica1}</li>
-                <li>${plan.caracteristica2}</li>
-                <li>${plan.caracteristica3}</li>
-                `
-            })
+    //     texto.innerHTML = `
+    //             <h4>${plan.title}</h4>
+    //             <span>${plan.subtitle}</span>
+    //             <ul>
+    //             <li>${plan.caracteristica1}</li>
+    //             <li>${plan.caracteristica2}</li>
+    //             <li>${plan.caracteristica3}</li>
+    //             </ul>
+    //             `
+    //         })
         })
 </script>

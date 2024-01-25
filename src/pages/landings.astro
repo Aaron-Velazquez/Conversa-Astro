@@ -4,6 +4,9 @@ import Stats from "../components/stats.astro"
 import Ventajas from "../components/Ventajas.astro"
 import Plantillas from "../components/plantillas.astro"
 
+const {Basbool} = Astro.props
+
+
 ---
 
 <Layout id="layout">
@@ -22,6 +25,7 @@ import Plantillas from "../components/plantillas.astro"
     </main>
     <Stats></Stats>
     <Ventajas></Ventajas>
+    <button id="boton">Cambio de estado</button>
     <Plantillas></Plantillas>
 </Layout>
 
@@ -59,3 +63,10 @@ h1{
 }
 
 </style>
+<!-- <script>
+    const boton = document.getElementById("boton") as HTMLButtonElement;
+    let sw = false;
+    boton.addEventListener("click", ()=> {sw ? sw = false : sw = true
+    alert (sw)}
+    )
+</script> -->
