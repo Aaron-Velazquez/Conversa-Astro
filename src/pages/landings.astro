@@ -2,10 +2,7 @@
 import Layout from "../components/Layout.astro"
 import Stats from "../components/stats.astro"
 import Ventajas from "../components/Ventajas.astro"
-import Plantillas from "../components/plantillas.astro"
-
-const {Basbool} = Astro.props
-
+import Plantillas from "../components/pageSelector.vue"
 
 ---
 
@@ -25,8 +22,7 @@ const {Basbool} = Astro.props
     </main>
     <Stats></Stats>
     <Ventajas></Ventajas>
-    <button id="boton">Cambio de estado</button>
-    <Plantillas></Plantillas>
+    <Plantillas client:load></Plantillas>
 </Layout>
 
 <style>
@@ -63,10 +59,3 @@ h1{
 }
 
 </style>
-<!-- <script>
-    const boton = document.getElementById("boton") as HTMLButtonElement;
-    let sw = false;
-    boton.addEventListener("click", ()=> {sw ? sw = false : sw = true
-    alert (sw)}
-    )
-</script> -->
