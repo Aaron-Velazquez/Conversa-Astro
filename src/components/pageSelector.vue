@@ -2,19 +2,47 @@
 
     import {ref} from 'vue'
     import Basic from "../config/basicPlan.json";
+    import BasicImg from "../config/basicImg.json";
     import Med from "../config/MedPlan.json";
+    import MedImg from "../config/MedImg.json";
     import Avan from "../config/AvanPlan.json";
+    import AvanImg from "../config/AvImg.json";
     
     
     const plans = ref([]);
+    const images = ref([]);
     plans.value = Basic;
-
+    images.value = BasicImg;
     const planOn = ref('');
 
+    const cssSelected = (selected) =>{
+        const items = document.querySelectorAll(".prices span");
+        let sw = 0, c = 0;
+        items.forEach((item)=>{
+            if ((selected == 'basic' && c==0 || selected == 'Med' && c==1 || selected == 'Av' && c==2) && sw==0){
+                items[c].classList.add("selected");
+                sw=1;
+            }else{
+                item.classList.remove("selected")
+            }
+            c=c+1;
+        })
+    }
+
     const planPicker = (current)=>{
-       if (current == 'basic') plans.value = Basic;
-       if (current == 'Med') plans.value = Med;
-       if (current == 'Av') plans.value = Avan;
+        cssSelected(current)
+        if (current == 'basic') {
+            images.value = BasicImg;
+            plans.value = Basic;
+       }
+       if (current == 'Med') {
+        images.value = MedImg;
+        plans.value = Med;
+    }
+       if (current == 'Av'){
+        images.value = AvanImg;
+        plans.value = Avan;
+       } 
     }
 
 </script>
@@ -24,7 +52,7 @@
     <div class="choose">
         <h3>Descubre cual es para vos</h3>
         <div class="prices">
-            <span @click="planPicker(planOn= 'basic')">300 mil</span>
+            <span class="selected" @click="planPicker(planOn= 'basic')">300 mil</span>
             <span @click="planPicker(planOn= 'Med')">500 mil</span>
             <span @click="planPicker(planOn= 'Av')">1 Millón</span>
         </div>
@@ -40,11 +68,11 @@
                 <li>{{plan.caracteristica3}}</li>
             </ul>
         </div>
-        <!-- <figure><img src="../../public/img/landings/landing-300-1.svg" alt="Página web"></figure>
-        <figure><img src="../../public/img/landings/landing-300-1.svg" alt="Página web"></figure>
-        <figure><img src="../../public/img/landings/landing-300-1.svg" alt="Página web"></figure>
-        <figure><img src="../../public/img/landings/landing-300-1.svg" alt="Página web"></figure>
-        <figure><img src="../../public/img/landings/landing-300-1.svg" alt="Página web"></figure> -->
+            <div class="plantillas-img" v-for="imgs in images">
+                <figure>
+                    <img :src="imgs.image" alt="Página web">
+                </figure>
+            </div>
     </div>
 </section>
 
@@ -57,7 +85,7 @@
         list-style:disc;
     }
     .plantillas-container{
-        width: 93rem;
+        width: 80rem;
         margin: auto;
         color: #1C1C1C;
     }
@@ -68,15 +96,18 @@
         font-size: 2.6rem;
     }
     .prices{
-        margin-top: 7vh;
+        margin: 7vh auto .5vh auto;
         font-size: 1.6rem;
-        display: flex;
-        justify-content: center;
-        gap: 20rem;
+        display: flex; 
+        width: 70rem;
+        justify-content: space-between;
     }
     .prices span{
-        margin-bottom: 10vh;
-        border-bottom:#1C1C1C solid 2px; 
+        width: 100%;
+    }
+    .selected{
+        border-bottom:#1C1C1C solid 3px;
+        font-size: 1.8rem;
     }
     .prices span:hover{
         cursor: pointer;
@@ -87,13 +118,25 @@
         border: #1C1C1C solid 1px;
         height: 1px;
     }
+    .plantillas-img figure:hover{
+        width: 105%;
+        cursor: pointer;
+        border-radius: 16px;
+    }
+    .plantillas-img figure img{
+        width: 100%;
+    }
     .presentacion{
         width: 70rem;
         margin: 5vh auto;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 35rem);
+        grid-template-rows: repeat(8, 180px);
         grid-row-gap: 2rem;
         justify-items: center;
+    }
+    .pres-text{
+        grid-area: 1 / 1 / 3 / 1;
     }
     .pres-text h4{
         color: #1C1C1C;
