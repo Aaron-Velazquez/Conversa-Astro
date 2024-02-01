@@ -131,12 +131,12 @@
         margin: 5vh auto;
         display: grid;
         grid-template-columns: repeat(2, 35rem);
-        grid-template-rows: repeat(8, 180px);
         grid-row-gap: 2rem;
         justify-items: center;
+        align-items: center;
     }
     .pres-text{
-        grid-area: 1 / 1 / 3 / 1;
+        margin-top: -10rem;
     }
     .pres-text h4{
         color: #1C1C1C;
