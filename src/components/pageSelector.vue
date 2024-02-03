@@ -133,6 +133,10 @@
         grid-template-columns: repeat(2, 35rem);
         grid-row-gap: 2rem;
         justify-items: center;
+        align-items: center;
+    }
+    .pres-text{
+        margin-top: -10rem;
     }
     .pres-text h4{
         color: #1C1C1C;
