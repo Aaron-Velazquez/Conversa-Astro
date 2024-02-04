@@ -31,24 +31,19 @@ import Personalizada from "../components/text-with-card.astro"
 <!-- Sección introducción -->
 
 <section class="seccion__introduccion">
-    <figure>
-        <img src="./img/left-wing.svg" alt="rectángulo">
+    <figure class="princ-img">
+        <img src="./img/personas-comprando.svg" alt="personas comprando">
     </figure>
-    <figure>
-        <img src="./img/right-wing.svg" alt="rectángulo">
-
-    </figure>
+    <div class="introduccion__text"> 
         <h2>Construye el equipo ideal para llegar a tu cliente</h2>
-        <figure class="princ-img">
-            <img src="./img/personas-comprando.svg" alt="personas comprando">
-        </figure>
-        <p>Use this long-form section to really paint a picture of the before and after. What’s the problem you’re solving? What’s the benefit people are getting? For example, if you’re hosting a webinar about how to collect leads for an online business, describe the struggle of trying to find and convert prospects—then explain how your webinar is gonna help make it easier.</p>
-        <div class="buttons">
+            <p>Use this long-form section to really paint a picture of the before and after. What’s the problem you’re solving? What’s the benefit people are getting? For example, if you’re hosting a webinar about how to collect leads for an online business, describe the struggle of trying to find and convert prospects—then explain how your webinar is gonna help make it easier.</p>
+            <div class="buttons">
+                
+                <button>Contactanos</button>
+                <button>Ver planes</button>
             
-            <button>Contactanos</button>
-            <button>Ver planes</button>
-        
-        </div>
+            </div>
+    </div>
     </section>
 
     <!-- Sección características -->
@@ -93,7 +88,7 @@ import Personalizada from "../components/text-with-card.astro"
     }
     .main__header{
         display: flex;
-        width: 80rem;
+        width: 90rem;
         padding: 1rem 0 10rem 0;
         margin: 7vh auto;
     }
@@ -114,7 +109,7 @@ import Personalizada from "../components/text-with-card.astro"
     .hero__text button{
         display: block;
         color: #fff;
-        background: rgba(73, 113, 244, 0.60);
+        background: hsla(226, 89%, 62%, 0.6);
         border: none;
         padding: 1.5rem;
         margin: 2rem 0 1.4rem 1.8rem;
@@ -122,6 +117,10 @@ import Personalizada from "../components/text-with-card.astro"
         border-radius: 19px;
         font-size: 1.2rem;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    }
+    .hero__text button:hover{
+        cursor: pointer;
+        background: hsla(226, 89%, 62%, 0.4);
     }
     .main__header figure{
         display: flex;
@@ -147,36 +146,33 @@ import Personalizada from "../components/text-with-card.astro"
 .seccion__introduccion{
     display: flex;
     width: 90rem;
-    margin: auto;
-    flex-direction: column;
+    margin: 10vh auto;
+    justify-content: center;
     align-items: center;
-}
-.seccion__introduccion :first-child :first-child{
-    left: 0;
-    position: absolute;
-    transform: translateY(2rem);
-
-}
-.seccion__introduccion :nth-child(2) :first-child{
-    position:absolute;
-    right: 0rem;
-    transform: translateY(7rem);
+    gap: 3rem;
 }
 .seccion__introduccion h2{
-    font-size: 2rem;
+    font-size: 2.4rem;
     margin: 2.4rem 0 3rem 0;
     color: #333;
 }
 .princ-img img{
-    width: 50%;
-    display: block;
-    margin: auto;
+    width: 100%;
+}
+.princ-img {
+    width: 45vw;
+}
+.introduccion__text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50rem;
+    gap: 3vh;
 }
 .seccion__introduccion p{
-    margin-top: 2rem;
     color: #7C7A7A;
-    width: 50%;
     font-size: 1.1rem;
+    width: 70%;
 }
 
 .buttons button{
@@ -194,6 +190,12 @@ import Personalizada from "../components/text-with-card.astro"
     background: #2E69D7;
     padding: 0.8rem 1.5rem;
 }
+.buttons button:hover{
+    cursor: pointer;
+    opacity: 80%;
+}
+
+
 .seccion__ventajas{
     display: flex;
     background: #00295B;
