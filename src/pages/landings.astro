@@ -7,22 +7,22 @@ import Plantillas from "../components/pageSelector.vue"
 ---
 
 <Layout id="layout">
-    <main class="hero__landings">
-        <h1 id="hacheUno">Mejora tus ventas y marca en línea</h1>
-        <div class="hero__sections">
-            <figure>
-                <img src="./img/main-img-landings.svg" alt="imagen publicitaria">
-            </figure>
+    <div class="landings-background">
+        <main class="hero__landings">
             <div class="hero__text">
-                <h2>¿Por qué necesitas una web?</h2>
+                <h1>El sitio web de tu negocio hecho a medida.</h1>
                 <p>Use this long-form section to really paint a picture of the before and after. What’s the problem you’re solving? What’s the benefit people are getting?</p>
-                <span>Explora nuestros productos</span>
+                <button>Explorar Planes</button>
+                <button>Ver Plantillas</button>
             </div>
-        </div>
-    </main>
-    <Stats></Stats>
+                <figure>
+                    <img src="./img/landing-heroimg.svg" alt="imagen publicitaria">
+                </figure>
+        </main>
+    </div>
+    <Stats id="seo"></Stats>
     <Ventajas></Ventajas>
-    <Plantillas client:load></Plantillas>
+    <Plantillas id="plantillas" client:load></Plantillas>
 </Layout>
 
 <style>
@@ -32,29 +32,55 @@ import Plantillas from "../components/pageSelector.vue"
     padding: 0;
     box-sizing: border-box;
 }
-
+.landings-background{
+    padding: 0.1px;
+    background: url("./img/landings-bg.svg");
+}
 .hero__landings{
     display: flex;
-    text-align: center;
-    flex-direction: column;
-    width: 93rem;
-    margin: 5vh auto;
-}
-.hero__sections{
-    width: 80rem;
-    display: flex;
-    align-items: top;
+    justify-content: space-between;
+    width: 70vw;
+    align-items: center;
+    margin: 4vh auto;
+    color: #1c1c1c;
 }
 h1{
     font-size: 3.4rem;
-    margin: 4vh 0;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
 }
 .hero__text{
-    margin: 7rem 0 0 1rem;
     width: 30vw;
-    text-align: left;
+    margin-top: -10vh;
 }
-.hero__sections figure img{
+.hero__text>*{
+    margin: 1.5rem 0;
+}
+.hero__text button{
+    border: none;
+    border-radius: 16px;
+    padding: .65rem 1.5rem;
+    font-weight: 500;
+    font-family: var(--main-font);
+    font-size: 1.1rem;
+    color: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.hero__text :nth-child(3){
+    background-color: hsl(213, 100%, 18%);
+}
+.hero__text :nth-child(3):hover{
+    background-color: hsl(213, 100%, 18%,0.8);
+    cursor: pointer;
+}
+.hero__text :nth-child(4):hover{
+    background-color: hsl(223, 100%, 61%,0.8);
+    cursor: pointer;
+}
+.hero__text :nth-child(4){
+    background-color: hsl(223, 100%, 61%);
+    margin-left: 1vw;
+}
+.hero__landings figure img{
     width: 100%;
 }
 

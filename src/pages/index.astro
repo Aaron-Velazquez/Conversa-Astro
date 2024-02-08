@@ -15,9 +15,9 @@ import Personalizada from "../components/text-with-card.astro"
         <div class="main__header">
             <div class="hero__text">
                 <span>Mejora la conversión</span>
-                <h1>Páginas webs que hacen click siempre con tu audiencia.</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos harum delectus reprehenderit dolorem quisquam optio adipisci sequi veritatis commodi nesciunt? dolorem quisquam.</p>
-                <button>COMIENZA YA</button>
+                <h1>Páginas webs que hacen click con tu audiencia.</h1>
+                <p>Alcanza a una amplia audiencia, brinda información a tus clientes y evalúa los resultados de tus campañas.</p>
+                <button onclick="window.location.href = './landings#plantillas';">COMIENZA YA</button>
                 <span>Accede a un público de miles de personas, proporciona información a tus clientes.</span>
             </div>
             <div class="hero__img">
@@ -39,8 +39,8 @@ import Personalizada from "../components/text-with-card.astro"
             <p>Use this long-form section to really paint a picture of the before and after. What’s the problem you’re solving? What’s the benefit people are getting? For example, if you’re hosting a webinar about how to collect leads for an online business, describe the struggle of trying to find and convert prospects—then explain how your webinar is gonna help make it easier.</p>
             <div class="buttons">
                 
-                <button>Contactanos</button>
-                <button>Ver planes</button>
+                <button onclick="window.location.href = './contacto';">Contactanos</button>
+                <button onclick="window.location.href = './presupuesto';">Ver planes</button>
             
             </div>
     </div>
@@ -182,6 +182,7 @@ import Personalizada from "../components/text-with-card.astro"
     border-radius: 16px;
     color: #fff;
     font-size: 1.2rem;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
 .buttons :first-child{
     background: #1C2B5C;
@@ -219,5 +220,34 @@ import Personalizada from "../components/text-with-card.astro"
     font-size: 1.5rem;
     font-weight: 500;
     width: 40vw;
+}
+@media screen and (max-width:800px){
+    .main__header{
+        width: 95%;
+        flex-direction: column;
+    }
+    .main__header figure{
+        display: none;
+    }
+    .hero__text{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .hero__text button{
+        padding: 1rem;
+        width: 10rem;
+        font-size: 1rem;
+    }
+    .main__header .hero__text :first-child(){
+        font-size: 1.2rem;    
+    }
+    .main__header h1{
+        font-size: 1.8rem;
+    }
+    .main__header p{
+        font-size: 1rem;
+    }
 }
 </style>

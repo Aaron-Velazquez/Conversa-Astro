@@ -9,17 +9,18 @@
     <main>
         <nav class="menu">
             <div class="opciones">
-                <span class="logo">
+                <span class="logo" onclick="window.location.href = './';">
                     Conversa
                 </span>
-                <li>Desarrollo</li>
-                <li>Landing</li>
-                <li>Soporte</li>
-                <li>Nosotros</li>
-                <li>Contacto</li>
+                <!-- <li>Desarrollo</li> -->
+                <li onclick="window.location.href = './landings';">Landings</li>
+                <li onclick="window.location.href = './soporte';">Soporte</li>
+                <li onclick="window.location.href = './nosotros';">Nosotros</li>
+                <li onclick="window.location.href = './presupuesto';">Presupuesto</li>
             </div>
-            <div class="contacto">
+            <div class="contacto" onclick="window.location.href = './contacto';">
                 <span>Contactanos</span>
+                <img src="./img/menuToggle.svg" alt="Hamburguesa">
             </div>
         </nav>
         <slot></slot>
@@ -43,9 +44,9 @@
                     <li>Seguros</li>
                 </div>
                 <div class="footer-section">
-                    <span>E-Mail</span>
+                    <span class="bolder">E-Mail</span>
                     <li>social@conversa.com.py</li>
-                    <span>Teléfono</span>
+                    <span class="bolder">Teléfono</span>
                     <li id="tel">+595 973236438</li>
                 </div>
             </div>
@@ -95,7 +96,6 @@
     .logo{
             font-family: var(--Logo-font);
             font-size: 2rem;
-            cursor: default;
             margin-right: 1.4rem;
         }
     .menu{
@@ -114,6 +114,9 @@
         .contacto{
             font-size: 1.8rem;
             margin-top: -0.2rem;
+        }
+        .contacto img{
+            display: none;
         }
         .opciones:hover, .contacto:hover{
             cursor: pointer;
@@ -171,7 +174,25 @@
         align-items: center;
         padding: 0.5rem;
     }
+    .social-icon:hover{
+        cursor: pointer;
+    }
+    .footer-section li:hover{
+        cursor: pointer;
+        text-decoration: underline;
+    }
     .social-icon > * {
         margin: 0 .5rem;
+    }
+    .bolder{
+        font-weight: 600;
+    }
+    @media screen and (max-width:800px){
+     .menu li, .contacto span{
+        display: none;
+     }
+     .contacto img{
+        display: inline;
+     }
     }
     </style>
