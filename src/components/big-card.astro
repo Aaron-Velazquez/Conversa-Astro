@@ -38,7 +38,7 @@
     margin: 7rem auto;
     display: flex;
     background: #E2F3FF;
-    border-radius: 20px;
+    border-radius: 16px;
     padding: 4rem;
     justify-content: space-around;
     position: relative;
@@ -57,7 +57,6 @@
     gap: 3rem;
 }
 .card-text p{
-    /* margin-left: 0.8rem; */
     color:#424242;
     font-weight: 300;
 }
@@ -76,7 +75,6 @@
     translate: -0.5rem;
 }
 .card-text button{
-    /* margin-left: 1rem; */
     width: 10rem;
     padding: 1rem;
     border: none;
@@ -110,5 +108,31 @@
 .circles-pattern{
     position: absolute;
     transform: translateY(-28rem);
+}
+@media screen and (max-width:800px){
+    .trust-card{
+        flex-direction: column;
+        width: 95vw;
+        padding: 0;
+    }
+    .card-text{
+        width: 100%;
+        gap: 1rem;
+        order: 3;
+    }
+    .card-text h3{
+        font-size: 1.6rem;
+    }
+    .card-text button{
+        width: 7rem;
+        font-size: .8rem;
+    }
+    .card-img{
+        width: 80vw;
+        order: 0;
+    }
+    .circles-pattern{
+        display: none;
+    }
 }
 </style>

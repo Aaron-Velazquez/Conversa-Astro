@@ -36,6 +36,9 @@ import Personalizada from "../components/text-with-card.astro"
     </figure>
     <div class="introduccion__text"> 
         <h2>Construye el equipo ideal para llegar a tu cliente</h2>
+        <figure class="princ-img-mb">
+            <img src="./img/personas-comprando.svg" alt="personas comprando">
+        </figure>
             <p>Use this long-form section to really paint a picture of the before and after. What’s the problem you’re solving? What’s the benefit people are getting? For example, if you’re hosting a webinar about how to collect leads for an online business, describe the struggle of trying to find and convert prospects—then explain how your webinar is gonna help make it easier.</p>
             <div class="buttons">
                 
@@ -160,6 +163,9 @@ import Personalizada from "../components/text-with-card.astro"
 .princ-img img{
     width: 100%;
 }
+.princ-img-mb{
+    display: none;
+}
 .princ-img {
     width: 45vw;
 }
@@ -213,7 +219,6 @@ import Personalizada from "../components/text-with-card.astro"
     z-index: 200;
     gap: 10vw;
     margin: 0 auto 10vh auto;
-    /* justify-content: center; */
     color: #fff;
 }
 .mensaje h3{
@@ -225,6 +230,8 @@ import Personalizada from "../components/text-with-card.astro"
     .main__header{
         width: 95%;
         flex-direction: column;
+        padding: 4vh 0;
+        margin: auto;
     }
     .main__header figure{
         display: none;
@@ -232,22 +239,70 @@ import Personalizada from "../components/text-with-card.astro"
     .hero__text{
         width: 100%;
         display: flex;
-        align-items: center;
         flex-direction: column;
     }
     .hero__text button{
         padding: 1rem;
         width: 10rem;
         font-size: 1rem;
+        margin: 2rem auto;
+    }
+    .hero__text :last-child(){
+        display: none;
     }
     .main__header .hero__text :first-child(){
-        font-size: 1.2rem;    
+        font-size: 1.2rem;
+        margin: 0;
     }
     .main__header h1{
         font-size: 1.8rem;
     }
     .main__header p{
         font-size: 1rem;
+        margin: 0;
     }
+
+    /* Sección introducción*/
+
+    .seccion__introduccion{
+        flex-direction: column;
+        margin: 4vh auto;
+        width: 100%;
+    }
+    .seccion__introduccion h2{
+        font-size: 1.6rem;
+    }
+    .seccion__introduccion p{
+        font-size: .9rem;
+        width: 95vw;
+    }
+    .introduccion__text{
+        width: 95vw;
+        margin: auto;
+        text-align: center;
+    }
+    .princ-img{
+        display: none;
+    }
+    .princ-img-mb{
+        display: block;
+    }
+    .princ-img-mb img{
+        width: 100%;
+    }
+    .buttons{
+        margin: auto;
+    }
+    .buttons button{
+        font-size: 1rem;
+        margin: 1rem auto 10rem auto;
+    }
+    .buttons :first-child{
+    padding: 0.6rem 1.2rem;
+}
+    .buttons :nth-child(2){
+    background: #2E69D7;
+    padding: 0.6rem 1rem;
+}
 }
 </style>
