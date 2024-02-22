@@ -1,0 +1,48 @@
+---
+import ofrecemos from "../config/elegirnos.json"
+---
+
+<div class="elegirnos-cards">
+    {
+        ofrecemos.map(
+            (feature)=>(
+            <div class="card">
+                <div class="card-title">
+                    <img src={feature.imagen} alt="Característica">
+                    <h4>{feature.title}</h4>
+                </div>
+                <p>{feature.text}</p>
+            </div>
+        )  )
+    }
+</div>
+<style>
+    .elegirnos-cards{
+        margin: 5vh 0;
+        display: grid;
+        column-gap: 5rem;
+        row-gap: 5vh;
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 15rem;
+    }
+    .card{
+        width: 15rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 16px;
+        padding: 0 1rem;
+        box-shadow: 1px 1px 1px 1px rgba(0,0,0,0.25);
+    }
+    .card p{
+        font-size: .95rem;
+    }
+    .card-title{
+        display: flex;
+        gap: 1rem;
+    }
+    .card h4{
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+</style>

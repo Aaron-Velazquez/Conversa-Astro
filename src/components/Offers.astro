@@ -59,4 +59,33 @@
     cursor: pointer;
     background: hsl(20, 81%, 52%,0.8);
 }
+@media screen and (max-width:800px){
+    .ofertas{
+        width: 95vw;
+        flex-direction: column;
+    }
+    .ofertas figure{
+        order: 1;
+        width: 95vw;
+        translate: 10vw 0;
+    }
+    .ofertas_text{
+        margin: 2vh 0;
+        order: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 95vw;
+    }
+    .ofertas_text h3{
+        font-size: 1.8rem;
+    }
+    .ofertas_text p{
+        width: 100%;
+        font-size: 1rem;
+    }
+    .ofertas_text button{
+        padding: 0.8rem 2rem;
+    }
+}
 </style>

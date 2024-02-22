@@ -121,9 +121,9 @@
     .plantillas-img figure:hover{
         width: 105%;
         cursor: pointer;
-        border-radius: 16px;
     }
     .plantillas-img figure img{
+        border-radius: 16px;
         width: 100%;
     }
     .presentacion{
@@ -151,5 +151,35 @@
     }
     .pres-text ul > *{
         margin: 1vh 0;
+    }
+
+    @media screen and (max-width:800px){
+    .plantillas-container{
+        width: 95vw;
+    }
+    .choose h3{
+        font-size: 1.6rem;
+    }
+    .prices{
+        width: 90vw;
+        font-size: 1rem;
+    }
+    .linea-precios{
+        width: 95vw;
+    }
+    .presentacion{
+        width: 90vw;
+        grid-template-columns: 100%;
+        grid-auto-rows: 25rem;
+    }
+    .pres-text h4{
+        font-size: 1.8rem;
+    }
+    .plantillas-img figure{
+        width: 90vw;
+    }
+    .pres-text{
+        margin: 0;
+    }
     }
 </style>

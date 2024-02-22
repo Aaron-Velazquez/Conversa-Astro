@@ -1,6 +1,301 @@
 ---
 import Layout from "../components/Layout.astro"
+import CardsElegirnos from "../components/queOfrecemos.astro"
 ---
 <Layout>
-    <h1>We are, we are the golden ones</h1>
+    <div class="nosotros-bg">
+        <img class="img-1" src="./img/nosotros-bg.svg" alt="Computadora">
+        <img class="img-2" src="./img/nosotros-bg-2.svg" alt="Equipo de trabajo">
+        <main>
+            <div class="nosotros-text">
+                <h1>Sobre Nosotros</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </main>
+    </div>
+    <!-- Sección Sobre Nosotros -->
+    
+    <section class="Sobre-Nosotros">
+        <figure>
+            <img src="./img/sobre-nosotros-img.svg" alt="Sobre nosotros">
+        </figure>
+        <div class="Sobre-Nosotros-text">
+            <span>Sobre Nosotros</span>
+            <h2>Contrata un servicio con SEO de calidad.</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas sem vitae leo dictum tempus. </p>
+            <button>Más información</button>
+        </div>
+    </section>
+    
+    <!-- Sección qué hacemos -->
+    
+    <section class="Que-Hacemos">
+        <div class="Que-Hacemos-text">
+            <h3>¿Qué hacemos?</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas sem vitae leo dictum tempus.</p>
+        </div>
+        <figure>
+            <img src="./img/que-hacemos-img.svg" alt="Dispositivos">
+        </figure>
+    </section>
+    
+    
+        <!-- Sección Misión -->
+    
+        <section class="mision">
+                <img src="./img/mision-img.svg" alt="Una persona navegando en la web">
+            <div class="mision-text">
+                <h2>Nuestra Misión</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas sem vitae leo dictum tempus.</p>
+            </div>
+        </section>
+
+    <!-- Sección por qué elegirnos -->
+
+    <section class="Elegirnos">
+        <span>Por qué deberías elegirnos</span>
+        <h3>Qué te ofrecemos</h3>
+        <CardsElegirnos></CardsElegirnos>
+    </section>
+
+    <!-- Sección Diseño -->
+
+    <section class="design">
+        <div class="design-container">
+            <div class="design-text">
+                <div class="text">
+                    <h3>Una aplicación moderna al diseño.</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas sem vitae leo dictum tempus. </p>
+                    <div class="design-boton">
+                        <a href="#">Ver nuestros modelos</a>
+                        <img src="./img/flecha-boton.svg" alt="flecha">
+                    </div>
+                </div>
+            </div>
+                <figure>
+                    <img src="./img/design-img.svg" alt="Escritorio">
+                </figure>
+        </div>
+    </section>
 </Layout>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    /* Sección header */
+
+    .nosotros-text{
+        width: 30rem;
+        margin: auto;
+        text-align: center;
+        color: #0027A8;
+    }
+    .nosotros-text h1{
+        font-size: 3.6rem;
+        text-shadow: 0 2px rgba(0, 0, 0, 0.25);
+    }
+    main{
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        background-color: hsla(219, 68%, 51%, 0.2);
+        height: 40vh;
+    }
+    .nosotros-bg{
+        padding: 0.1px;
+    }
+    .nosotros-bg img{
+        position: absolute;
+    }
+    .img-1{
+        left: 0;
+    }
+    .img-2{
+        right: 0;
+    }
+
+/* Sección sobre nosotros */
+
+.Sobre-Nosotros{
+    margin: 10vh auto;
+    display: flex;
+    width: 90rem;
+    justify-content: center;
+    gap: 5rem;
+}
+.Sobre-Nosotros figure img{
+    width: 100%;
+}
+.Sobre-Nosotros-text{
+    width: 30rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.Sobre-Nosotros-text span{
+    color: #0027A8;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.Sobre-Nosotros-text h2{
+    font-size: 2.2rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    line-height: 140%;
+}
+.Sobre-Nosotros-text>*{
+    margin: 1.5vh 0;
+}
+.Sobre-Nosotros-text button{
+    width: 13rem;
+    margin-top: 4vh;
+    padding: 1rem;
+    border: none;
+    font-family: "Murecho", sans-serif;
+    font-weight: 500;
+    color: #fff;
+    font-size: 1.2rem;
+    background: #0027A8;
+    border-radius: 16px;
+}
+
+/* Sección qué hacemos */
+
+.Que-Hacemos{
+    width: 100%;
+    color: #fff;
+    background: #1C2B5C;
+    display: flex;
+    padding: 2vh 0;
+    gap: 10vw;
+    justify-content: center;
+}
+.Que-Hacemos figure img{
+    width: 100%;
+}
+.Que-Hacemos figure{
+    width: 20rem;
+}
+.Que-Hacemos-text{
+    display: flex;
+    width: 30rem;
+    flex-direction: column;
+    justify-content: center;
+}
+.Que-Hacemos-text h3{
+    font-size: 2rem;
+}
+.Que-Hacemos-text > *{
+    margin: 1vh;
+}
+
+/* Sección Nuestra Misión */
+
+.mision{
+    display: flex;
+    width: 70rem;
+    margin: 10vh auto;
+    gap: 3rem;
+    border-radius: 16px;
+    border: 1px #CDCDCD solid;
+    box-shadow: 0 3px rgba(0, 0, 0, 0.25);
+}
+.mision-text{
+    display: flex;
+    width: 20rem;
+    flex-direction: column;
+    justify-content: center;
+}
+.mision-text h2{
+    font-size: 2.2rem;
+    margin-bottom: 2vh;
+}
+.mision img{
+    width: 40rem;
+    display: block;
+    border-radius: 16px 0 0 16px;
+}
+
+/* Sección Por Qué Elegirnos */
+
+.Elegirnos{
+    display: flex;
+    width: 90rem;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+.Elegirnos span{
+    font-size: 1.6rem;
+}
+.Elegirnos h3{
+    font-size: 3rem;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Sección Diseño */
+
+.design{
+    margin: 10vh 0;
+    width: 100%;
+}
+.design-container{
+    display: flex;
+    gap: 10vw;
+    justify-content: space-between;
+    background: url("./img/design-bg.svg");
+}
+.design-container figure{
+    width: 100%;
+}
+.design-container figure img{
+    width: 100%;
+    display: block;
+}
+.design-text{
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+}
+.text>*{
+    margin: 2vh 0;
+}
+.text h3{
+    font-size: 2.2rem;
+    text-shadow: 0 2px rgba(0, 0, 0, 0.25);
+    line-height: 130%;
+}
+.text p{
+    color: #D1D1D1;
+    margin-bottom: 5vh;
+}
+.design-boton{
+    width: 12rem;
+    background: #fff;
+    padding: .4rem;
+    border-radius: 16px;
+    box-shadow: 0 4px rgba(0, 0, 0, 0.25);
+}
+.design-boton img{
+    width: .8rem;
+}
+.text a{
+    margin: 0.5rem;
+    font-size: .9rem;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+.text{
+    width: 20rem;
+}
+</style>

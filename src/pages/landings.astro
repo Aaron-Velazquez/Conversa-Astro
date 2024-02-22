@@ -6,14 +6,16 @@ import Plantillas from "../components/pageSelector.vue"
 
 ---
 
-<Layout id="layout">
+<Layout>
     <div class="landings-background">
         <main class="hero__landings">
             <div class="hero__text">
                 <h1>El sitio web de tu negocio hecho a medida.</h1>
                 <p>Use this long-form section to really paint a picture of the before and after. What’s the problem you’re solving? What’s the benefit people are getting?</p>
-                <button>Explorar Planes</button>
-                <button>Ver Plantillas</button>
+                <div class="hero__buttons">
+                    <button>Explorar Planes</button>
+                    <button>Ver Plantillas</button>
+                </div>
             </div>
                 <figure>
                     <img src="./img/landing-heroimg.svg" alt="imagen publicitaria">
@@ -55,7 +57,7 @@ h1{
 .hero__text>*{
     margin: 1.5rem 0;
 }
-.hero__text button{
+.hero__buttons button{
     border: none;
     border-radius: 16px;
     padding: .65rem 1.5rem;
@@ -65,23 +67,46 @@ h1{
     color: #fff;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.hero__text :nth-child(3){
+.hero__buttons :first-child{
     background-color: hsl(213, 100%, 18%);
 }
-.hero__text :nth-child(3):hover{
+.hero__buttons :nth-child(1):hover{
     background-color: hsl(213, 100%, 18%,0.8);
     cursor: pointer;
 }
-.hero__text :nth-child(4):hover{
+.hero__buttons :nth-child(2):hover{
     background-color: hsl(223, 100%, 61%,0.8);
     cursor: pointer;
 }
-.hero__text :nth-child(4){
+.hero__buttons :nth-child(2){
     background-color: hsl(223, 100%, 61%);
     margin-left: 1vw;
 }
 .hero__landings figure img{
     width: 100%;
 }
-
+@media screen and (max-width:800px){
+    .hero__landings{
+        width: 95vw;
+        height: 50vh;
+    }
+    .hero__landings figure{
+        display: none;
+    }
+    .hero__landings h1{
+        font-size: 1.8rem;
+    }
+    .hero__text{
+        width: 90vw;
+        margin: 2vh auto;
+    }
+    .hero__text button{
+        padding: .4rem 1.2rem;
+        font-size: 1rem;
+    }
+    .hero__buttons{
+        display: flex;
+        justify-content: center;
+    }
+}
 </style>
