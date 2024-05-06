@@ -1,0 +1,540 @@
+---
+import Header from "../components/hero-img.astro"
+import Layout from "../components/Layout.astro";
+---
+<Layout>
+    <Header
+    header="Nuestros Planes"
+    subtitle="Escoge el que se adecue mejor a las necesidades de tu empresa y transmita el mensaje que buscas dar."
+    imagen="./img/planes-bg.svg"
+></Header>
+
+<section class="section-1">
+    <div class="section-1-text">
+        <h2>Evalua los planes que tenemos para vos</h2>
+        <img src="./img/garabato.svg" alt="Garabato">
+        <p>Esta es la oportunidad de fomentar el crecimiento de tu marca, en los múltiples planes que varian en enfoque y diseño, nos adaptamos a vos y buscamos el desarrollo que permita el mejor resultado gracias a estas herramientas.</p>
+    </div>
+    <div class="section-1-img">
+        <div class="sc-1_tarj">
+            <figure>
+                <img src="./img/section-1-img.svg" alt="SEO">
+            </figure>
+            <span>Optimización de Búsqueda</span>
+        </div>
+        <div class="sc-1_tarj">
+            <figure>
+                <img src="./img/section-1-img2.svg" alt="SEO">
+            </figure>
+            <span>Diseño Innovador</span>
+        </div>
+        <div class="sc-1_tarj">
+            <figure>
+                <img src="./img/section-1-img3.svg" alt="SEO">
+            </figure>
+            <span>Análisis de Datos</span>
+        </div>
+    </div>
+</section>
+
+<div class="nuestros-planes">
+    <h2>Nuestros Planes</h2>
+</div>
+
+<section class="NP-plantillas">
+    <div class="NP-plantillas_p">
+        <figure>
+            <img src="./img/NS-plantillas-img.svg" alt="Computadora">
+        </figure>
+        <div class="np-plantillas_text">
+            <span>Plantillas</span>
+            <h3>Un desarrollo especializado en convertir.</h3>
+            <p>Nuestras plantillas están diseñadas para otorgarle la información esencial al cliente para tomar la desición de compra, con botones de llamada a la acción y formularios sencillos pero eficientes.</p>
+            <button>Contactanos</button>
+        </div>
+    </div>
+        <div class="NP-stats">
+            <div class="np-stats-text">
+                <h4>El enfoque de nuestro desarrollo</h4>
+                <span>Nuestro equipo sigue la metodología óptima para el desarrollo web.</span>
+                <li>SEO</li>
+                <li>Diseño</li>
+                <li>Programación</li>
+            </div>
+            <div class="np-stats-numbers">
+                <div class="stat">
+                    <span class="number">5+</span>
+                    <span>Años en Programación</span>
+                </div>
+                <div class="stat">
+                    <span class="number">3+</span>
+                    <span>Años en Diseño Publicitario</span>
+                </div>
+                <div class="stat">
+                    <span class="number">3+</span>
+                    <span>Años en SEO</span>
+                </div>
+                <div class="stat">
+                    <span class="number">10+</span>
+                    <span>Proyectos de análisis de datos</span>
+                </div>
+            </div>            
+        </div>
+</section>
+
+<section class="NP-custom">
+    <div class="np-custom_text">
+        <span>Diseño Custom</span>
+        <h3>Prioriza cada detalle de tu sitio web, cada visita cuenta.</h3>
+        <p>Tu mensaje como lo querés contar, en la forma en la que lo querés contar. Un diseño personalizado con todas las secciones y funcionalidades que quieras añadirle.</p>
+        <p>Contacta con nuestro equipo y te preparamos una oferta.</p>
+        <button>Contactanos</button>
+    </div>
+    <figure>
+        <img src="./img/NP-custom-img.svg" alt="Computadora">
+    </figure>
+</section>
+
+<div class="NP-custom-features">
+    <div class="np-features-container">
+    <div class="np-custom-f-text">
+        <h2>Muestra tu oferta a tu manera.</h2>
+        <p>Encuentra la forma ideal para que el cliente contecte con tu empresa a través del diseño funcional y una interfaz atractiva especializada.
+        </p>
+    </div>
+    <div class="np-custom-f-info">
+        <div class="np-custom-tarj">
+            <img src="./img/section-1-img.svg" alt="SEO">
+            <h4>Máxima Personalización</h4>
+            <span>Buscamos el modelo que se adecue a vos.</span>
+        </div>
+        <div class="np-custom-tarj">
+            <img src="./img/section-1-img.svg" alt="SEO">
+            <h4>Tamaño ajustable.</h4>
+            <span>Incluye información precisa o un desarrollo a detalle de tu empresa.</span>
+        </div>
+        <div class="np-custom-tarj">
+            <img src="./img/section-1-img.svg" alt="SEO">
+            <h4>Enfoque óptimo</h4>
+            <span>Apunta especialmente a tu público objetivo.</span>
+        </div>
+    </div>
+    </div>
+
+</div>
+
+</Layout>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.section-1{
+    width: 80rem;
+    margin: 10vh auto;
+    display: flex;
+    gap: 5vh;
+    text-align: center;
+    flex-direction: column;
+}
+.section-1-text{
+    width: 50%;
+    margin: auto;
+    font-size: 1.2rem;
+}
+.section-1-text h2{
+    font-size: 2.6rem;
+    font-weight: 500;
+}
+.section-1-text>*{
+    margin: 1vh 0;
+}
+.section-1-img{
+    display: flex;
+    justify-content: space-around;
+}
+.sc-1_tarj figure img{
+    width: 5rem;
+    height: 7rem;
+    margin-bottom: 1rem;
+    border-bottom: solid 3px #000;
+}
+.sc-1_tarj img{
+    width: 100%;
+}
+.sc-1_tarj{
+    font-size: 1.2rem;
+}
+
+.nuestros-planes{
+    width: 100%;
+    color: #fff;
+    background: #1C2B5C;
+    text-align: center;
+    font-size: 1.8rem;
+    padding: 1rem;
+}
+
+.NP-plantillas{
+    width: 80rem;
+    margin: 15vh auto;
+}
+.NP-plantillas_p{
+    display: flex;
+    gap: 10vw;
+}
+.np-plantillas_text{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 1.1rem;
+    color: #404040;
+}
+.np-plantillas_text>*{
+    margin: 1vh 0;
+}
+.np-plantillas_text span{
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+.np-plantillas_text h3{
+    font-size: 2rem;
+    color: #000;
+    line-height: 130%;
+    font-weight: 500;
+}
+.np-plantillas_text button{
+    color: #fff;
+    width: 10rem;
+    border: none;
+    background-color: #1C2B5C;
+    font-family: "Murecho", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 3vh;
+    border-radius: 16px;
+    padding: .6rem 0;
+}
+.NP-plantillas_p button:hover{
+    cursor: pointer;
+    background-color: #1c2b5ce5;
+}
+.NP-stats{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10vh;
+}
+.np-stats-text h4{
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.np-stats-text{
+    font-size: 1.2rem;
+    color: #404040;
+}
+.np-stats-text span{
+    display: block;
+    margin-bottom: 4vh;
+}
+.np-stats-text li{
+    color: #000;
+    font-size: 1.3rem;
+    width: fit-content;
+    border-bottom: 3px solid #000;
+}
+.np-stats-text > *{
+    margin: 1vh 0;
+}
+.np-stats-numbers{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 10vw;
+}
+.stat{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.stat span{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #404040;
+}
+.stat .number{
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: #00295B;
+}
+
+.NP-custom{
+    width: 100%;
+    color: #fff;
+    display: flex;
+    gap: 10vw;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: #00295B;
+}
+.NP-custom figure img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.NP-custom figure{
+    height: 37rem;
+}
+.np-custom_text{
+    width: 30rem;
+}
+.np-custom_text > *{
+    margin: 1vh 0;
+}
+.np-custom_text span{
+    font-size: 1.1rem;
+    color: #9FCEFF;
+}
+.np-custom_text h3{
+    font-size: 2rem;
+}
+.np-custom_text button{
+    color: #fff;
+    width: 10rem;
+    border: none;
+    background-color: #2E69D7;
+    font-family: "Murecho", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 3vh;
+    border-radius: 16px;
+    padding: .6rem 0;
+}
+.np-custom_text button:hover{
+    background-color: rgba(46, 105, 215, 0.871);
+    cursor: pointer;
+}
+
+.NP-custom-features{
+    width: 100%;
+    padding: 0.1px;
+    background: #E2F3FF;
+    color: #0027A8;
+}
+.np-features-container{
+    width: 80rem;
+    margin: 10vh auto;
+}
+.np-custom-f-text h2{
+    font-size: 2.4rem;
+    line-height: 130%;
+}
+.np-custom-f-text{
+    width: 35%;
+}
+.np-custom-f-text > *{
+    margin: 3vh 0;
+}
+.np-custom-f-info{
+    display: flex;
+    margin: 10vh 0;
+    justify-content: space-between;
+}
+.np-custom-tarj{
+    width: 15rem;
+}
+.np-custom-tarj img{
+    width: 4rem;
+    display: block;
+}
+.np-custom-tarj > *{
+    margin: 2vh 0;
+}
+.NP-custom-form{
+    width: 80rem;
+    padding: 10vh 0;
+    margin: 10vh auto;
+    border-radius: 16px;
+    background: #00295B;
+    color: #fff;
+    display: flex;
+    gap: 10vw;
+    justify-content: center;
+}
+.NP-custom-form form{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+}
+.NP-custom-form form h2{
+    font-size: 2.6rem;
+}
+.NP-custom-form form > *{
+    margin: 2vh 0;
+}
+.NP-custom-form input[type="text"]{
+    padding: .6rem;
+    background-color: #00295B;
+    border: none;
+    border-bottom: #fff 3px solid;
+    color: #fff;
+    font-size: 1rem;
+    outline: 0px solid transparent;
+}
+.NP-custom-form input[type="submit"]{
+    color: #fff;
+    width: 10rem;
+    border: none;
+    background-color: #3A71FF;
+    font-family: "Murecho", sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    margin-top: 3vh;
+    border-radius: 16px;
+    padding: .6rem 0;
+}
+.NP-custom-form input[type="text"]::placeholder{
+    color: #E2F3FF;
+    opacity: 1;
+    font-size: 1rem;
+}
+
+.form-tarjetas{
+    display: flex;
+    width: 30rem;
+    flex-wrap: wrap;
+}
+.form-tarjeta{
+    width: 12rem;
+    display: flex;
+    flex-direction: column;
+}
+.form-tarjeta img{
+    width: 5rem;
+}
+.form-tarjeta>*{
+    margin: 1vh 0;
+}
+
+
+@media screen and (max-width: 800px){
+    .section-1{
+        width: 90vw;
+    }
+    .section-1-text{
+        width: 100%;
+        font-size: .95rem;
+    }
+    .section-1-text h2{
+        font-size: 1.6rem;
+    }
+    .section-1-text img{
+        width: 3rem;
+    }
+    .section-1-img{
+        flex-direction: column;
+        gap: 4vh;
+    }
+
+    .nuestros-planes{
+        font-size: 1.2rem;
+    }
+
+
+    .NP-plantillas{
+        width: 90vw;
+    }
+    .np-plantillas_text{
+        width: 100%;
+    }
+    .np-plantillas_text span{
+        font-size: 1rem;
+    }
+    .np-plantillas_text h3{
+        font-size: 1.6rem;
+    }
+    .np-plantillas_text button{
+        width: 8rem;
+    }
+    .NP-plantillas_p{
+        flex-direction: column
+    }
+    .NP-plantillas_p img{
+        width: 20rem;
+    }
+    .NP-stats{
+        margin-top: 10vh;
+        gap: 5vh;
+        flex-direction: column;
+    }
+    .np-stats-numbers{
+        column-gap: 5vw;
+        row-gap: 5vh;
+    }
+
+
+    .NP-custom{
+        flex-direction: column;
+    }
+    .NP-custom figure img{
+        display: none;
+    }
+    .NP-custom figure{
+        height: auto;
+    }
+    .np-custom_text{
+        padding-top: 3rem;
+        width: 80vw;
+        margin: auto;
+    }
+    .np-custom_text h3{
+        font-size: 1.6rem;
+        margin-bottom: 2vh;
+    }
+    .np-custom_text span{
+        font-size: 1rem;
+    }
+    .np-custom_text button{
+        width: 8rem;
+        margin-top: 2vh;
+    }
+    .np-custom_text > *{
+       margin: 2vh 0;
+    }
+
+
+    .np-features-container{
+        width: 90vw;
+    }
+    .np-custom-f-text h2{
+        font-size: 1.6rem;
+    }
+    .np-custom-f-text{
+        width: 100%;    
+    }
+    .np-custom-f-info{
+        gap: 4vh;
+        flex-direction: column;
+    }
+    .np-custom-tarj{
+       width: 20rem;
+    }
+
+    .NP-custom-form{
+        width: 95vw;
+        flex-direction: column;
+        gap: 10vh;
+        padding: 5vh 0;
+    }
+    .NP-custom-form form{
+        width: 90%;
+        margin: auto;
+    }
+    .NP-custom-form form h2{
+        font-size: 1.6rem;
+    }
+    .form-tarjetas{
+        display: none;
+    }
+}
+</style>

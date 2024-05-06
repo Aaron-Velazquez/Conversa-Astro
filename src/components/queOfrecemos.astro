@@ -26,6 +26,7 @@ import ofrecemos from "../config/elegirnos.json"
         grid-auto-rows: 15rem;
     }
     .card{
+        background: #fff;
         width: 15rem;
         display: flex;
         flex-direction: column;
@@ -44,5 +45,11 @@ import ofrecemos from "../config/elegirnos.json"
     .card h4{
         font-size: 1.6rem;
         font-weight: 500;
+    }
+
+    @media screen and (max-width: 800px){
+        .elegirnos-cards{
+            grid-template-columns: 100%;
+        }
     }
 </style>

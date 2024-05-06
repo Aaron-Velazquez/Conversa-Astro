@@ -5,6 +5,7 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
 ---
 <!DOCTYPE html>
 <html lang="en">
@@ -24,7 +25,7 @@ const { title } = Astro.props;
                 <li onclick="window.location.href = './landings';">Landings</li>
                 <li onclick="window.location.href = './soporte';">Soporte</li>
                 <li onclick="window.location.href = './nosotros';">Nosotros</li>
-                <li onclick="window.location.href = './presupuesto';">Presupuesto</li>
+                <li onclick="window.location.href = './planes';">Presupuesto</li>
             </div>
             <div class="contacto">
                 <span onclick="window.location.href = './contacto';">Contactanos</span>
@@ -33,11 +34,11 @@ const { title } = Astro.props;
             </div>
         </nav>
         <div class="menu-mobile onScreen">
-        <span>Desarrollo</span>
-        <span>Plantillas</span>
-        <span>Soporte</span>
-        <span>Nosotros</span>
-        <span>Contacto</span>
+        <span id="Desarrollo">Desarrollo</span>
+        <span id="Plantillas">Plantillas</span>
+        <span id="Soporte">Soporte</span>
+        <span id="Nosotros">Nosotros</span>
+        <span id="Contacto">Contacto</span>
         </div>
         <slot></slot>
     </main>
@@ -138,6 +139,7 @@ const { title } = Astro.props;
         }
         .menu-mobile{
             position: fixed;
+            z-index: 200;
             width: 100vw;
             height: 70vh;
             background: var(--strong-blue);
@@ -259,6 +261,34 @@ const { title } = Astro.props;
     const menuToggle = document.querySelector(".menu-mobile") as HTMLDivElement;
     const salir = document.getElementById("salir") as HTMLImageElement;
     const hamburger = document.getElementById("hamburger") as HTMLImageElement;
+    
+    const Desarrollo = document.getElementById("Desarrollo") as HTMLLIElement;
+    const Plantillas = document.getElementById("Plantillas") as HTMLLIElement;
+    const Soporte = document.getElementById("Soporte") as HTMLLIElement;
+    const Nosotros = document.getElementById("Nosotros") as HTMLLIElement;
+    const Contacto = document.getElementById("Contacto") as HTMLLIElement;
+
+    Desarrollo.addEventListener("click", ()=>{
+        window.location.href= "./planes"
+    })
+
+    Plantillas.addEventListener("click", ()=>{
+        window.location.href= "./landings"
+    })
+    
+    Soporte.addEventListener("click", ()=>{
+        window.location.href= "./soporte"
+    })
+    
+    Nosotros.addEventListener("click", ()=>{
+        window.location.href= "./nosotros"
+    })
+
+    
+    Contacto.addEventListener("click", ()=>{
+        window.location.href= "./contacto"
+    })
+
     hamburger.addEventListener("click",
      ()=>{
         menuToggle.classList.toggle("onScreen");

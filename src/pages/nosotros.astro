@@ -1,6 +1,5 @@
 ---
 import Layout from "../components/Layout.astro"
-import CardsElegirnos from "../components/queOfrecemos.astro"
 ---
 <Layout>
     <div class="nosotros-bg">
@@ -9,7 +8,7 @@ import CardsElegirnos from "../components/queOfrecemos.astro"
         <main>
             <div class="nosotros-text">
                 <h1>Sobre Nosotros</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <p>Te contamos más sobre nuestros objetivos y misión.</p>
             </div>
         </main>
     </div>
@@ -21,9 +20,9 @@ import CardsElegirnos from "../components/queOfrecemos.astro"
         </figure>
         <div class="Sobre-Nosotros-text">
             <span>Sobre Nosotros</span>
-            <h2>Contrata un servicio con SEO de calidad.</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas sem vitae leo dictum tempus. </p>
-            <button>Más información</button>
+            <h2>Encontrá un plan que se adecue a tu negocio.</h2>
+            <p>Nuestro enfoque es fomentar el desarrollo a través de la comunicación atendiendo a tus necesidades.</p>
+            <button>Nuestros Planes</button>
         </div>
     </section>
     
@@ -32,7 +31,7 @@ import CardsElegirnos from "../components/queOfrecemos.astro"
     <section class="Que-Hacemos">
         <div class="Que-Hacemos-text">
             <h3>¿Qué hacemos?</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas sem vitae leo dictum tempus.</p>
+            <p>Desarrollamos webs que conectan con tu audiencia, generan tráfico y convierte dándole seguridad a tu marca.</p>
         </div>
         <figure>
             <img src="./img/que-hacemos-img.svg" alt="Dispositivos">
@@ -44,28 +43,25 @@ import CardsElegirnos from "../components/queOfrecemos.astro"
     
         <section class="mision">
                 <img src="./img/mision-img.svg" alt="Una persona navegando en la web">
+                <img src="./img/mision-img-mobile.svg" alt="Una persona navegando en la web">
             <div class="mision-text">
                 <h2>Nuestra Misión</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas sem vitae leo dictum tempus.</p>
+                <p>Buscamos hacer llegar a tu cliente, la información esencial que necesita para conocer tu empresa y así, generar ventas.</p>
             </div>
         </section>
 
     <!-- Sección por qué elegirnos -->
 
-    <section class="Elegirnos">
-        <span>Por qué deberías elegirnos</span>
-        <h3>Qué te ofrecemos</h3>
-        <CardsElegirnos></CardsElegirnos>
-    </section>
 
     <!-- Sección Diseño -->
 
     <section class="design">
         <div class="design-container">
+            <!-- <img src="./img/design-bg.svg" alt=""> -->
             <div class="design-text">
                 <div class="text">
                     <h3>Una aplicación moderna al diseño.</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas sem vitae leo dictum tempus. </p>
+                    <p>El diseño de nuestras webs sigue los estándares de innovación actual y su estructura está optimizada para garantizar los resultados.</p>
                     <div class="design-boton">
                         <a href="#">Ver nuestros modelos</a>
                         <img src="./img/flecha-boton.svg" alt="flecha">
@@ -77,6 +73,27 @@ import CardsElegirnos from "../components/queOfrecemos.astro"
                 </figure>
         </div>
     </section>
+
+
+
+<!-- Seccion Nuestros Miembros  -->
+
+<section class="nuestros-miembros">
+    <h3>Nuestros miembros</h3>
+    <div class="miembros">
+        <div class="tarjeta-miembro">
+            <img src="./img/yo.svg" alt="Aaron Velazquez">
+            <span>Aaron Velazquez</span>
+            <p>Cinco años de experiencia en el desarrollo web, tres años en el SEO, el tracking de analíticas, y campañas de marketing especializadas.</p>
+        </div>
+        <div class="tarjeta-miembro">
+            <img src="./img/miembro-2.svg" alt="Aaron Velazquez">
+            <span>Sofía Cabañas</span>
+            <p>Tres años de experiencia en el diseño publicitario, actual enfoque en el diseño y desarrollo web.</p>
+        </div>
+    </div>
+</section>
+
 </Layout>
 
 <style>
@@ -96,7 +113,7 @@ import CardsElegirnos from "../components/queOfrecemos.astro"
     }
     .nosotros-text h1{
         font-size: 3.6rem;
-        text-shadow: 0 2px rgba(0, 0, 0, 0.25);
+        text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
     }
     main{
         position: relative;
@@ -215,6 +232,9 @@ import CardsElegirnos from "../components/queOfrecemos.astro"
     font-size: 2.2rem;
     margin-bottom: 2vh;
 }
+.mision img:nth-child(2){
+    display: none;
+}
 .mision img{
     width: 40rem;
     display: block;
@@ -223,20 +243,6 @@ import CardsElegirnos from "../components/queOfrecemos.astro"
 
 /* Sección Por Qué Elegirnos */
 
-.Elegirnos{
-    display: flex;
-    width: 90rem;
-    flex-direction: column;
-    align-items: center;
-    margin: auto;
-}
-.Elegirnos span{
-    font-size: 1.6rem;
-}
-.Elegirnos h3{
-    font-size: 3rem;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.25);
-}
 
 
 /* Sección Diseño */
@@ -297,5 +303,151 @@ import CardsElegirnos from "../components/queOfrecemos.astro"
 }
 .text{
     width: 20rem;
+}
+
+/* Sección Servicios */
+
+
+
+/* Sección nuestros miembros*/
+
+.nuestros-miembros{
+    width: 90rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.nuestros-miembros h3{
+    font-size: 2.6rem;
+}
+.miembros{
+    display: flex;
+    justify-content: center;
+    gap: 10vw;
+    margin: 5vh 0;
+}
+.tarjeta-miembro{
+    width: 20rem;
+    border-radius: 16px;
+    box-shadow: 1px 4px rgba(0, 0, 0, 0.25);
+}
+.tarjeta-miembro > :not(img){
+    margin: 1vh 2vw 2vh 2vw;
+}
+.tarjeta-miembro span{
+    text-align: center;
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+}
+.tarjeta-miembro img{
+    width: 100%;
+    display: block;
+}
+
+@media screen and (max-width: 800px){
+    .img-1{
+        display: none;
+    }
+    .img-2{
+        width: 13rem;
+    }
+    .nosotros-text h1{
+        font-size: 1.8rem;
+        margin: 1.5vh;
+    }
+    .nosotros-text{
+        width: 80vw;
+    }
+    .Sobre-Nosotros{
+        width: 80vw;
+        flex-direction: column;
+    }
+    .Sobre-Nosotros-text{
+        width: 100%;
+    }
+    .Sobre-Nosotros-text span{
+        font-size: .95rem;
+    }
+    .Sobre-Nosotros-text h2{
+        font-size: 1.6rem;
+    }
+    .Sobre-Nosotros-text button{
+        width: 10rem;
+        font-size: 1rem;
+        padding: .7rem;
+    }
+
+    .Que-Hacemos figure{
+        display: none;
+    }
+    .Que-Hacemos-text{
+        width: 85vw;
+        font-size: .95rem;
+    }
+    .Que-Hacemos-text h3{
+        font-size: 1.6rem;
+    }
+
+
+    .mision{
+        width: 85vw;
+        flex-direction: column;
+        gap: 1vh;
+    }
+    .mision-text{
+        padding: 3rem 0;
+        width: 80%;
+        margin: auto;
+        text-align: center;
+    }
+    .mision-text h2{
+        font-size: 1.6rem;
+    }
+    .mision img:first-child{
+        display: none;
+    }
+    .mision img:nth-child(2){
+        display: block;
+        width: 100%;
+        border-radius: 0;
+    }
+
+
+
+    .design-container{
+        padding: 3rem 0;
+        gap: 0;
+    }
+    .design-container figure{
+        display: none;
+    }
+    .design-text{
+        align-items: center;
+        width: 80vw;
+        margin: auto;
+        font-size: .9rem;
+    }
+    .text h3{
+        font-size: 1.6rem;
+    }
+
+
+
+
+.nuestros-miembros{
+    width: 95vw;
+    margin: 10vh auto;
+}
+.nuestros-miembros h3{
+    font-size: 1.6rem;
+}
+
+.miembros{
+    flex-direction: column;
+    gap: 10vh;
+}
+
 }
 </style>

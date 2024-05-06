@@ -1,0 +1,115 @@
+<section class="servicios">
+    <div class="tarjeta tarj-1">
+        <span>Servicios</span>
+        <h4>Buscamos comunicar y vender.</h4>
+        <p>Encontramos las necesidades de cada empresa y preparamos una oferta especializada.</p>
+    </div>
+    <div class="tarjeta tarj-2">
+        <div class="tarj-container">
+            <img src="./img/servicios-tarj-img.svg" alt="Tarjeta imagen">
+            <span>Diseño Atractivo</span>
+            <p>Creamos soluciones innovadoras y únicas
+                que impulsan el crecimiento y éxito de tu empresa.</p>
+        </div>
+    </div>
+    <div class="tarjeta tarj-2">
+        <div class="tarj-container">
+            <img src="./img/servicios-tarj-img.svg" alt="Tarjeta imagen">
+            <span>Optimización</span>
+            <p>Te ayudamos a posicionarte de manera efectiva en los resultados de búsqueda y a alcanzar a tu audiencia objetivo.</p>
+        </div>
+    </div>
+    <div class="tarjeta tarj-3">
+        <div class="tarj-container">
+            <img src="./img/servicios-tarj-img.svg" alt="Tarjeta imagen">
+            <span>Foco en la venta</span>
+            <p>En un diseño intuitivo y fácil de navegar, cada visita se convierte en una oportunidad para vender o ganar un cliente potencial.</p>
+        </div>
+    </div>
+    <div class="tarjeta tarj-2">
+        <div class="tarj-container">
+            <img src="./img/servicios-tarj-img.svg" alt="Tarjeta imagen">
+            <span>Precios Accesibles</span>
+            <p>Contamos con una buena variedad de precios y planes que se ajustan a las necesidades de tu negocio.</p>
+        </div>
+    </div>
+    <div class="tarjeta tarj-2">
+        <div class="tarj-container">
+            <img src="./img/servicios-tarj-img.svg" alt="Tarjeta imagen">
+            <span>Soporte Técnico</span>
+            <p>Cuenta con el soporte técnico especializado para resolver dudas, con disponibilidad y garantía de buena atención.</p>
+        </div>
+    </div>
+</section>
+
+<style>
+    .servicios{
+    display: grid;
+    width: 60rem;
+    margin: 0 auto 10vh auto;
+    row-gap: 3vh;
+    grid-template-columns: repeat(3, 1fr);
+}
+.tarjeta{
+    width: 17rem;
+}
+.tarj-2, .tarj-3{
+    box-shadow: 1px 3px 2px rgba(0, 0, 0, 0.25);
+}
+.servicios :nth-child(2), .servicios div:nth-child(5){
+    margin-top: 5vh;
+}
+.tarj-1 span{
+    color: #0027A8;
+    font-size: 1.8rem;
+    font-weight: 500;
+}
+.tarj-1 h4{
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 130%;
+}
+.tarj-1 p, .tarj-3 p{
+    font-weight: 300;
+    margin-top: 2vh;
+}
+.tarj-2{
+    background: #E2F3FF;
+    height: 15.5rem;
+    font-size: .85rem;
+    border-radius: 16px;
+}
+.tarj-container>*{
+    margin: 1vh 0 1vh 1.5vh;
+}
+.tarj-2 span, .tarj-3 span{
+    font-weight: 500;
+    font-size: 1.4rem;
+}
+.tarj-2 img, .tarj-3 img{
+    display: block;
+    width: 5rem;
+}
+.tarj-container{
+    width: 13rem;
+}
+.tarj-3{
+    background: #3A71FF;
+    color: #fff;
+    height: 16rem;
+    font-size: .85rem;
+    border-radius: 16px;
+}
+
+@media screen and (max-width: 800px) {
+    .servicios{
+        width: 95vw;
+        margin: auto;
+        justify-items: center;
+        grid-template-columns: 100%;
+    }
+    .servicios :nth-child(2), .servicios div:nth-child(5){
+    margin-top: 0;
+}
+}
+</style>

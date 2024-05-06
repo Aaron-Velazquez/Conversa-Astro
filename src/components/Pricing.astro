@@ -1,7 +1,7 @@
 <div class="section__pricing">
-    <h3>Precios</h3>
-    <p>Encuentra el plan que mejor se ajuste a tu ambición</br>
-        Las webs no solo varían en forma, sino también en finalidad ¡escoge la tuya!</p>
+    <h3>Plantillas web</h3>
+    <p>Contamos con plantillas adaptables a tu negocio.</br>
+        Existe una gran variedad de webs, cada una tiene su propósito y su estrategia.</p>
         <div class="price__boxes">
             <div class="little__boxes first">
                 <h4>Básico</h4>
@@ -205,3 +205,20 @@
 }
 }
 </style>
+
+<script>
+    const clickBas = document.getElementById("click_Bas") as HTMLButtonElement;
+    const clickMed = document.getElementById("click_Med") as HTMLButtonElement;
+    const clickAva = document.getElementById("click_Ava") as HTMLButtonElement;
+
+
+    clickBas.addEventListener("click", ()=>{
+        window.location.href= "./landings#plantillas"
+    })
+    clickMed.addEventListener("click", ()=>{
+        window.location.href= "./landings#plantillas"
+    })
+    clickAva.addEventListener("click", ()=>{
+        window.location.href= "./landings#plantillas"
+    })
+</script>

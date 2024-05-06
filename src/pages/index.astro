@@ -1,11 +1,11 @@
 ---
 import Layout from "../components/Layout.astro";
-import Tarjetas from "../components/Cards.astro"
+import Tarjetas from "../components/servicios.astro"
 import Seguridad from "../components/big-card.astro"
-import Ventajas from "../components/Cards-ventajas.astro"
 import Ofertas from "../components/Offers.astro"
 import Precios from "../components/Pricing.astro"
 import Personalizada from "../components/text-with-card.astro"
+import Eleginos from "../components/eleginos.astro"
 
 
 ---
@@ -18,7 +18,7 @@ import Personalizada from "../components/text-with-card.astro"
                 <h1>Páginas webs que hacen click con tu audiencia.</h1>
                 <p>Alcanza a una amplia audiencia, brinda información a tus clientes y evalúa los resultados de tus campañas.</p>
                 <button onclick="window.location.href = './landings#plantillas';">COMIENZA YA</button>
-                <span>Accede a un público de miles de personas, proporciona información a tus clientes.</span>
+                <span>Descubre los planes, ofertas y ventajas que tenemos para vos.</span>
             </div>
             <div class="hero__img">
                 <figure>
@@ -35,11 +35,14 @@ import Personalizada from "../components/text-with-card.astro"
         <img src="./img/personas-comprando.svg" alt="personas comprando">
     </figure>
     <div class="introduccion__text"> 
-        <h2>Construye el equipo ideal para llegar a tu cliente</h2>
+        <h2>En la comunicación está la clave para llegar a tus clientes.</h2>
         <figure class="princ-img-mb">
             <img src="./img/personas-comprando.svg" alt="personas comprando">
         </figure>
-            <p>Use this long-form section to really paint a picture of the before and after. What’s the problem you’re solving? What’s the benefit people are getting? For example, if you’re hosting a webinar about how to collect leads for an online business, describe the struggle of trying to find and convert prospects—then explain how your webinar is gonna help make it easier.</p>
+            <p>Nuestro enfoque comienza por comprender a fondo tu negocio y tus objetivos. 
+                Nos sumergimos en tu identidad de marca para desarrollar un sitio web que no solo atraiga, 
+                sino que también mantenga a tu audiencia comprometida.
+                </p>
             <div class="buttons">
                 
                 <button onclick="window.location.href = './contacto';">Contactanos</button>
@@ -56,14 +59,17 @@ import Personalizada from "../components/text-with-card.astro"
 
     <!-- Sección Ventajas -->
 
-    <seccion class="seccion__ventajas">
+    <!-- <seccion class="seccion__ventajas">
         <div class="mensaje">
             <h3>La conexión con el cliente se construye a través de la <b>comunicación</b></h3>
             <p>La información concisa de una página web permite a tu cliente entender con mayor facilidad <b>el mensaje que buscas que reciba.</b></p>
-        </div>
-        <Ventajas>
+        </div> -->
+        <Eleginos>
 
-        </Ventajas>
+        </Eleginos>
+        <!-- <Ventajas>
+
+        </Ventajas> -->
     </seccion>
     
     <Ofertas></Ofertas>
@@ -298,11 +304,11 @@ import Personalizada from "../components/text-with-card.astro"
         margin: 1rem auto 10rem auto;
     }
     .buttons :first-child{
-    padding: 0.6rem 1.2rem;
+    padding: 0.7rem 1.2rem;
 }
     .buttons :nth-child(2){
     background: #2E69D7;
-    padding: 0.6rem 1rem;
+    padding: 0.7rem 1rem;
 }
 
 /*Sección ventajas*/

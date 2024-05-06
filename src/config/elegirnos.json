@@ -1,32 +1,32 @@
 [
     {
         "imagen": "./img/seo-icon.svg",
-        "title": "SEO",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas sem vitae leo dictum tempus."
+        "title": "Convertir",
+        "text": "El diseño de tu web debe estar orientado a la conversión y dar al cliente la información esencial para que esto suceda."
+    },
+    {
+        "imagen": "./img/seo-icon.svg",
+        "title": "Diseño UX",
+        "text": "Garantiza una interacción amigable entre el usuario y tu marca, una buena interfaz de usuario siempre deja una impresión positiva."
+    },
+    {
+        "imagen": "./img/seo-icon.svg",
+        "title": "Analíticas",
+        "text": "Para reunir la información de tus usuarios y experiencia en tu web, accede a los diversos reportes del comportamiento y conversión de google y otras plataformas."
     },
     {
         "imagen": "./img/seo-icon.svg",
         "title": "SEO",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas sem vitae leo dictum tempus."
+        "text": "Para que tu web llegue a una audiencia orgánica, es importante que esté optimizada para aparecer arriba en los motores de búsqueda."
     },
     {
         "imagen": "./img/seo-icon.svg",
-        "title": "SEO",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas sem vitae leo dictum tempus."
+        "title": "Seguridad",
+        "text": "Tu información y la de tus usuarios es valiosa, es esencial que estén protegidas por buenas prácticas de seguridad."
     },
     {
         "imagen": "./img/seo-icon.svg",
-        "title": "SEO",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas sem vitae leo dictum tempus."
-    },
-    {
-        "imagen": "./img/seo-icon.svg",
-        "title": "SEO",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas sem vitae leo dictum tempus."
-    },
-    {
-        "imagen": "./img/seo-icon.svg",
-        "title": "SEO",
-        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque egestas sem vitae leo dictum tempus."
+        "title": "Responsive",
+        "text": "Un sitio web responsivo garantiza el confort de los usuarios sin importar el dispositivo por el cual se realice la conexión."
     }
 ]

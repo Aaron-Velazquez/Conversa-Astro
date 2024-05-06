@@ -1,31 +1,32 @@
 <section class="stats">
     <div class="stats-container">
         <div class="stats-one">
-            <h3>Excelentes soluciones que atraen a las empresas por su potencia y facilidad de adopción.</h3>
+            <h3>Los sitios web aumentan la visibilidad, los clientes y las conversiones, estableciendo la marca en el mercado.</h3>
         </div>
         <div class="stats-dos">
                 <div class="stat-row">
                     <div class="estadistica">
-                        <span class="estadisticas">Mejora el 500%</span>
-                        <span>Las ventas</span>
+                        <span class="estadisticas">De los usuarios 70%</span>
+                        <span>Compra en línea</span>
                     </div>
                     <div class="estadistica">
-                        <span class="estadisticas">Mejora el 500%</span>
-                        <span>Las ventas</span>                
+                        <span class="estadisticas">De los usuarios 30%</span>
+                        <span>Busca en internet para comprar</span>                
                     </div>
                 </div>
                     <div class="linea-stat"></div>
                     <div class="stat-row">
                         <div class="estadistica">
-                            <span class="estadisticas">Mejora el 500%</span>
-                            <span>Las ventas</span>
+                            <span class="estadisticas">De los usuarios 23%*</span>
+                            <span>Compra luego de ingresar al sitio</span>
                         </div>
                         <div class="estadistica">
-                            <span class="estadisticas">Mejora el 500%</span>
-                            <span>Las ventas</span>                
+                            <span class="estadisticas">De los usuarios 49%</span>
+                            <span>Encuentra nuevos productos y ofertas en internet</span>                
                         </div>                
                 </div>
         </div>
+        <span class="disclaimer">*La taza de conversión varía de acuerdo a la industria y al tipo de sitio</span>
     </div>
 </section>
 
@@ -60,7 +61,7 @@
     }
     .stat-row{
         display: flex;
-        gap: 1rem;
+        gap: 5rem;
     }
     .estadistica{
         width: 10rem;
@@ -79,6 +80,12 @@
         height: 2px;
         border-radius: 10px;
         border: #fff solid 2px;
+    }
+    .disclaimer{
+        font-size: 12px;
+        position: absolute;
+        left: 5rem;
+        transform: translateY(40vh);
     }
 @media screen and (max-width:800px){
     .stats-container{
