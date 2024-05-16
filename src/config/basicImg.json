@@ -1,11 +1,17 @@
 [
     {
-        "image": "./img/landings/landing-300-1.svg"
+        "image": "./img/landings/landing-300-1.jpg"
     },
     {
-        "image": "./img/landings/landing-300-2.svg"
+        "image": "./img/landings/landing-300-2.jpg"
     },
     {
-        "image": "./img/landings/landing-300-3.svg"
+        "image": "./img/landings/landing-300-3.jpg"
+    },
+    {
+        "image": "./img/landings/landing-300-4.jpg"
+    },
+    {
+        "image": "./img/landings/landing-300-5.jpg"
     }
 ]

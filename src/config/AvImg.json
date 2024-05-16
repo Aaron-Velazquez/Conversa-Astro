@@ -1,11 +1,14 @@
 [
     {
-        "image": "./img/landings/av-plan-1.svg"
+        "image": "./img/landings/av-plan-1.jpg"
     },
     {
-        "image": "./img/landings/av-plan-2.svg"
+        "image": "./img/landings/av-plan-2.jpg"
     },
     {
-        "image": "./img/landings/av-plan-3.svg"
+        "image": "./img/landings/av-plan-3.jpg"
+    },
+    {
+        "image": "./img/landings/av-plan-4.jpg"
     }
 ]

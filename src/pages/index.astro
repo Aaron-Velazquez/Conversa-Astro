@@ -14,17 +14,13 @@ import Eleginos from "../components/eleginos.astro"
     <main class="main__container">
         <div class="main__header">
             <div class="hero__text">
-                <span>Mejora la conversión</span>
-                <h1>Páginas webs que hacen click con tu audiencia.</h1>
-                <p>Alcanza a una amplia audiencia, brinda información a tus clientes y evalúa los resultados de tus campañas.</p>
+                <h1>Webs que hacen <b>click</b> con tu audiencia.</h1>
                 <button onclick="window.location.href = './landings#plantillas';">COMIENZA YA</button>
                 <span>Descubre los planes, ofertas y ventajas que tenemos para vos.</span>
-            </div>
-            <div class="hero__img">
+            </div>          
                 <figure>
-                    <img src="./img/computadoras.svg" alt="Dispositivos con una web abierta">
+                    <img src="./img/imagen-principal.webp" alt="Dispositivos con una web abierta">
                 </figure>
-            </div>
         </div>
     </main>
 
@@ -32,12 +28,12 @@ import Eleginos from "../components/eleginos.astro"
 
 <section class="seccion__introduccion">
     <figure class="princ-img">
-        <img src="./img/personas-comprando.svg" alt="personas comprando">
+        <img src="./img/equipo-de-trabajo.webp" alt="Equipo de trabajo">
     </figure>
     <div class="introduccion__text"> 
         <h2>En la comunicación está la clave para llegar a tus clientes.</h2>
         <figure class="princ-img-mb">
-            <img src="./img/personas-comprando.svg" alt="personas comprando">
+            <img src="./img/equipo-de-trabajo.webp" alt="Equipo de trabajo">
         </figure>
             <p>Nuestro enfoque comienza por comprender a fondo tu negocio y tus objetivos. 
                 Nos sumergimos en tu identidad de marca para desarrollar un sitio web que no solo atraiga, 
@@ -46,7 +42,7 @@ import Eleginos from "../components/eleginos.astro"
             <div class="buttons">
                 
                 <button onclick="window.location.href = './contacto';">Contactanos</button>
-                <button onclick="window.location.href = './presupuesto';">Ver planes</button>
+                <button onclick="window.location.href = './planes';">Ver planes</button>
             
             </div>
     </div>
@@ -97,55 +93,51 @@ import Eleginos from "../components/eleginos.astro"
     }
     .main__header{
         display: flex;
-        width: 85vw;
-        padding: 4vh 0 20vh 0;
-        /* height: 80vh; */
+        justify-content: center;
+        width: 75rem;
+        line-height: 1.2;
+        padding: 4vh 0 15vh 0;
         margin: 7vh auto;
     }
-    .main__header .hero__text :first-child(){
-        color: var(--light-cian);
-        font-size: 1.4rem;
-        text-transform:uppercase;
-        font-family: var(--span-font);
-    }
     .hero__text{
-        width: 57rem;
-    }
-    .hero__text p{
-        width: 80%;
-        font-size: 1.125rem;
-        margin: 3rem 0 1rem 0;
+        width: 50rem;
     }
     .hero__text button{
         display: block;
         color: #fff;
-        background: hsla(226, 89%, 62%, 0.6);
+        background: #3A71FF;
         border: none;
-        padding: 1.5rem;
-        margin: 2rem 0 1.4rem 0;
-        width: 17rem;
+        padding: 1.2rem;
+        margin: 2.5rem 0;
+        width: 13rem;
+        font-weight: 500;
         border-radius: 19px;
         font-size: 1.2rem;
+        font-family: var(--main-font);
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     }
     .hero__text button:hover{
         cursor: pointer;
-        background: hsla(226, 89%, 62%, 0.4);
+        background: hsl(223, 100%, 61%,0.4);
     }
     .main__header figure{
         display: flex;
+        width: 60%;
         height: 100%;
         align-items: center;
     }
     .main__header img{
         width: 100%;
     }
-    .main__header h1{
-        font-size: 3.3rem;
+    .main__header h1, .main__header h1 b{
+        font-size: 4.4rem;
         margin: 1.6rem 0 1rem 0;
     }
+    .main__header h1 b{
+        display: inline;
+        text-shadow: 8px 0 #3A71FF;
+    }
     .hero__text :last-child{
-        font-size: 1rem;
         width: 50%;
         display: block;
     }
@@ -155,11 +147,11 @@ import Eleginos from "../components/eleginos.astro"
 
 .seccion__introduccion{
     display: flex;
-    width: 85vw;
+    width: 75vw;
     margin: 10vh auto;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: center;
-    gap: 3rem;
+    gap: 7rem;
 }
 .seccion__introduccion h2{
     font-size: 2.4rem;
@@ -173,13 +165,13 @@ import Eleginos from "../components/eleginos.astro"
     display: none;
 }
 .princ-img {
-    width: 45vw;
+    width: 30rem;
 }
 .introduccion__text{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50rem;
+    width: 40rem;
     gap: 3vh;
 }
 .seccion__introduccion p{

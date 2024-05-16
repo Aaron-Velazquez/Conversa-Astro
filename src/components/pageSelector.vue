@@ -29,6 +29,20 @@
         })
     }
 
+    const show = (image) => {
+        const display = document.querySelector(".detalles");
+        display.classList.remove("none");
+        display.innerHTML = `
+        <img src="../../public/img/equis.svg" class="salir" alt="X">
+        <figure class="webImg">
+            <img src="${image}" alt="Página web">
+            </figure>` 
+        const salir = document.querySelector(".salir");
+        salir.addEventListener("click", ()=>{
+            display.classList.add("none");
+        })
+    }
+
     const planPicker = (current)=>{
         cssSelected(current)
         if (current == 'basic') {
@@ -50,7 +64,7 @@
 <template>
 <section class="Plantillas-container">
     <div class="choose">
-        <h3>Descubre cual es para vos</h3>
+        <h3>Algunas de nuestras plantillas</h3>
         <div class="prices">
             <span class="selected" @click="planPicker(planOn= 'basic')">300 mil</span>
             <span @click="planPicker(planOn= 'Med')">500 mil</span>
@@ -70,12 +84,13 @@
         </div>
             <div class="plantillas-img" v-for="imgs in images">
                 <figure>
-                    <img :src="imgs.image" alt="Página web">
+                    <img :src="imgs.image" alt="Página web" @click="show(imgs.image)">
                 </figure>
             </div>
     </div>
 </section>
-
+<div class="detalles none">
+</div>
 </template>
 <style>
     *{
@@ -119,12 +134,22 @@
         height: 1px;
     }
     .plantillas-img figure:hover{
-        width: 105%;
+        width: 35rem;
+        height: 29rem;
         cursor: pointer;
+        box-shadow: 2px 2px 2px #00000086;
+    }
+    .plantillas-img figure{
+        border-radius: 16px;
+        width: 33rem;
+        height: 27rem;
     }
     .plantillas-img figure img{
         border-radius: 16px;
+        object-position: top;
+        object-fit: cover;
         width: 100%;
+        height: 100%;
     }
     .presentacion{
         width: 70rem;
@@ -152,7 +177,40 @@
     .pres-text ul > *{
         margin: 1vh 0;
     }
-
+    .detalles{
+        background-color: #00000086;
+        text-align: center;
+        position: fixed;
+        top:0;
+        width: 100%;
+        height: 125vh;
+        z-index: 2000;
+    }
+    .webImg{
+        margin: 2vh auto;
+        width: 50rem;
+        height: 90vh;
+        overflow: auto;
+    }
+    .webImg img{
+        width: 100%;
+    }
+    .salir{
+        margin-top: 4vh;
+        transform: translateX(22.5rem);
+        width: 1rem;
+        position: absolute;
+    }
+    .salir:hover{
+        cursor: pointer;
+    }
+    .salir img{
+        display: block;
+        width: 100%;
+    }
+    .none{
+        display: none;
+    }
     @media screen and (max-width:800px){
     .plantillas-container{
         width: 95vw;

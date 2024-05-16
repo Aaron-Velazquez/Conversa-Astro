@@ -1,17 +1,16 @@
 <section class="section__trust">
     <div class="trust-card">
         <div class="card-text">
-            <h3>El diseño que más gusta, el diseño que más vende.</h3>
-            <p>Cuando un visitante llega a tu sitio web, cada elemento visual y de diseño influye en su decisión. 
-                Un diseño bien estructurado y centrado en la experiencia del usuario puede guiar hábilmente al cliente a través de la página, desde la exploración inicial de productos o servicios hasta la conversión final.</p>
+            <h3>El diseño que más gusta, el diseño que más vende.</h3> 
+            <p>Un diseño bien estructurado y centrado en la experiencia del usuario puede guiar hábilmente al cliente a través de la página, desde la exploración inicial de productos o servicios hasta la conversión final.</p>
             <button onclick="window.location.href = './nosotros';">Explorar más</button>
         </div>
         <div class="card-img">
             <figure>
-                <img src="./img/laptop.svg" alt="Laptop con web">
+                <img src="./img/tercera-imagen.webp" alt="Laptop con web">
             </figure>
         </div>
-        <div class="feature la1">
+        <!-- <div class="feature la1">
             <figure>
                 <img src="./img/candado.svg" alt="Candado">
             </figure>
@@ -22,7 +21,7 @@
                 <img src="./img/check.svg" alt="Green Check">
             </figure>
             <span>Conversión</span>
-        </div>
+        </div> -->
     </div>
     <figure class="circles-pattern">
         <img src="./img/circles-pattern.svg" alt="Patrón de círculos">
@@ -40,32 +39,36 @@
     display: flex;
     background: #E2F3FF;
     border-radius: 16px;
-    padding: 4rem;
     justify-content: space-around;
     position: relative;
     z-index: 100;
 }
 .card-text h3{
     font-size: 2.2rem;
-    margin-top: 1.5rem;
     width: 90%;
     color: #212121;
 }
 .card-text{
+    padding: 2.5rem 4rem;
     display: flex;
+    justify-content: center;
     flex-direction: column;
-    width: 35rem;
+    width: 30rem;
     gap: 3rem;
 }
 .card-text p{
+    width: 23rem;
     color:#424242;
     font-weight: 300;
 }
 .card-img figure img{
     width: 100%;
+    display: block;
 }
 .card-img{
-    width: 40%;
+    margin-top: 3rem;
+    width: 50rem;
+    height: 100%;
     display: flex;
     align-items: center;
 }

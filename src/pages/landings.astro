@@ -13,8 +13,8 @@ import Plantillas from "../components/pageSelector.vue"
                 <h1>Tu sitio web listo para empezar.</h1>
                 <p>Te preparamos plantillas web de alto rendimiento para tu proyecto. Agiliza el proceso y desarrolla tu sitio con nuestras plantillas listas para adaptarse a tus necesidades.</p>
                 <div class="hero__buttons">
-                    <button>Nuestros Planes</button>
-                    <button>Ver Plantillas</button>
+                    <button onclick="window.location.href = './planes';">Nuestros Planes</button>
+                    <button id="ver_plantillas">Ver Plantillas</button>
                 </div>
             </div>
                 <figure>
@@ -110,3 +110,12 @@ h1{
     }
 }
 </style>
+
+<script>
+    const button = document.getElementById('ver_plantillas');
+    const div = document.getElementById('plantillas');
+    console.log(div, button);
+    button?.addEventListener('click', ()=>{
+            div?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
+        })
+</script>
