@@ -11,14 +11,14 @@ import Plantillas from "../components/pageSelector.vue"
         <main class="hero__landings">
             <div class="hero__text">
                 <h1>Tu sitio web listo para empezar.</h1>
-                <p>Te preparamos plantillas web de alto rendimiento para tu proyecto. Agiliza el proceso y desarrolla tu sitio con nuestras plantillas listas para adaptarse a tus necesidades.</p>
+                <p>Agiliza el proceso y desarrolla tu sitio con nuestras plantillas listas para adaptarse a tus necesidades.</p>
                 <div class="hero__buttons">
                     <button onclick="window.location.href = './planes';">Nuestros Planes</button>
                     <button id="ver_plantillas">Ver Plantillas</button>
                 </div>
             </div>
                 <figure>
-                    <img src="./img/landing-heroimg.svg" alt="imagen publicitaria">
+                    <img src="./img/500-preview-2.png" alt="imagen publicitaria">
                 </figure>
         </main>
     </div>
@@ -36,22 +36,26 @@ import Plantillas from "../components/pageSelector.vue"
 }
 .landings-background{
     padding: 0.1px;
-    background: url("./img/landings-bg.svg");
+    background: #E2F3FF;
 }
 .hero__landings{
     display: flex;
-    justify-content: space-between;
-    width: 70vw;
+    gap: 2rem;
+    justify-content: center;
+    width: 80vw;
+    height: 70vh;
     align-items: center;
     margin: 4vh auto;
-    color: #1c1c1c;
+    color: #161935;
 }
 h1{
     font-size: 3.4rem;
-    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+    font-weight: 900;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px hsl(213, 100%, 18%,0.25);
 }
 .hero__text{
-    width: 30vw;
+    width: 25rem;
     margin-top: -10vh;
 }
 .hero__text>*{
@@ -83,7 +87,12 @@ h1{
     margin-left: 1vw;
 }
 .hero__landings figure img{
-    width: 100%;
+    width: 45rem;
+    height: 25rem;
+    object-position: top;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 8px 6px 4px hsl(0, 0%, 0%,0.25);
 }
 @media screen and (max-width:800px){
     .hero__landings{

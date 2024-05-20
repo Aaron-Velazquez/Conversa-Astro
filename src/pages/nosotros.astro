@@ -3,20 +3,21 @@ import Layout from "../components/Layout.astro"
 ---
 <Layout>
     <div class="nosotros-bg">
-        <img class="img-1" src="./img/nosotros-bg.svg" alt="Computadora">
-        <img class="img-2" src="./img/nosotros-bg-2.svg" alt="Equipo de trabajo">
         <main>
             <div class="nosotros-text">
                 <h1>Sobre Nosotros</h1>
-                <p>Te contamos más sobre nuestros objetivos y misión.</p>
+                <p>Te contamos más sobre nuestro equipo de trabajo, objetivos y misión.</p>
             </div>
+            <figure>
+                <img src="./img/nosotros-principal.webp" alt="Equipo de trabajo">
+            </figure>
         </main>
     </div>
     <!-- Sección Sobre Nosotros -->
     
     <section class="Sobre-Nosotros">
         <figure>
-            <img src="./img/sobre-nosotros-img.svg" alt="Sobre nosotros">
+            <img src="./img/sobre-nosotros.webp" alt="Sobre nosotros">
         </figure>
         <div class="Sobre-Nosotros-text">
             <span>Sobre Nosotros</span>
@@ -34,7 +35,7 @@ import Layout from "../components/Layout.astro"
             <p>Desarrollamos webs que conectan con tu audiencia, generan tráfico y convierte dándole seguridad a tu marca.</p>
         </div>
         <figure>
-            <img src="./img/que-hacemos-img.svg" alt="Dispositivos">
+            <img src="./img/nosotros-pc.webp" alt="Dispositivos">
         </figure>
     </section>
     
@@ -56,14 +57,14 @@ import Layout from "../components/Layout.astro"
     <!-- Sección Diseño -->
 
     <section class="design">
-        <div class="design-container">
-            <!-- <img src="./img/design-bg.svg" alt=""> -->
+        <div class="design-container">mr
+            +
             <div class="design-text">
                 <div class="text">
                     <h3>Una aplicación moderna al diseño.</h3>
                     <p>El diseño de nuestras webs sigue los estándares de innovación actual y su estructura está optimizada para garantizar los resultados.</p>
                     <div class="design-boton">
-                        <a href="#">Ver nuestros modelos</a>
+                        <a href="./landings">Ver nuestros modelos</a>
                         <img src="./img/flecha-boton.svg" alt="flecha">
                     </div>
                 </div>
@@ -106,34 +107,32 @@ import Layout from "../components/Layout.astro"
     /* Sección header */
 
     .nosotros-text{
-        width: 30rem;
-        margin: auto;
-        text-align: center;
-        color: #0027A8;
+        /* width: 30rem; */
+        font-size: 1.2rem;
+        color: #E2F3FF;
     }
     .nosotros-text h1{
         font-size: 3.6rem;
+        margin-bottom: 1.5rem;
         text-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
     }
     main{
         position: relative;
         display: flex;
         align-items: center;
+        justify-content: center;
         width: 100%;
-        background-color: hsla(219, 68%, 51%, 0.2);
-        height: 40vh;
+        background-color: #161935;
+        height: 60vh;
+    }
+    main figure{
+        width: 35rem;
+    }
+    main figure img{
+        width: 100%;
     }
     .nosotros-bg{
         padding: 0.1px;
-    }
-    .nosotros-bg img{
-        position: absolute;
-    }
-    .img-1{
-        left: 0;
-    }
-    .img-2{
-        right: 0;
     }
 
 /* Sección sobre nosotros */
@@ -180,23 +179,26 @@ import Layout from "../components/Layout.astro"
     background: #0027A8;
     border-radius: 16px;
 }
+.Sobre-Nosotros-text button:hover{
+    cursor: pointer;
+    background: hsl(226, 100%, 33%,0.8);
+}
 
 /* Sección qué hacemos */
 
 .Que-Hacemos{
     width: 100%;
     color: #fff;
-    background: #1C2B5C;
+    background: #161935;
     display: flex;
     padding: 2vh 0;
-    gap: 10vw;
+    gap: 7vw;
     justify-content: center;
+    height: 20rem;
+    margin: 15vh 0;
 }
 .Que-Hacemos figure img{
-    width: 100%;
-}
-.Que-Hacemos figure{
-    width: 20rem;
+    transform: translateY(-30px);
 }
 .Que-Hacemos-text{
     display: flex;
@@ -205,7 +207,7 @@ import Layout from "../components/Layout.astro"
     justify-content: center;
 }
 .Que-Hacemos-text h3{
-    font-size: 2rem;
+    font-size: 2.8rem;
 }
 .Que-Hacemos-text > *{
     margin: 1vh;
