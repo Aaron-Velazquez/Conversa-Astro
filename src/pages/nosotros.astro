@@ -83,14 +83,14 @@ import Layout from "../components/Layout.astro"
     <h3>Nuestros miembros</h3>
     <div class="miembros">
         <div class="tarjeta-miembro">
-            <img src="./img/yo.svg" alt="Aaron Velazquez">
+            <img src="./img/aaron.webp" alt="Aaron Velazquez">
             <span>Aaron Velazquez</span>
-            <p>Cinco años de experiencia en el desarrollo web, tres años en el SEO, el tracking de analíticas, y campañas de marketing especializadas.</p>
+            <p>Cinco años de experiencia en el desarrollo web <br> Tres años en el SEO, el tracking de analíticas, y campañas de marketing especializadas.</p>
         </div>
         <div class="tarjeta-miembro">
-            <img src="./img/miembro-2.svg" alt="Aaron Velazquez">
+            <img src="./img/dani.jpg" alt="Sofia Cabañas">
             <span>Sofía Cabañas</span>
-            <p>Tres años de experiencia en el diseño publicitario, actual enfoque en el diseño y desarrollo web.</p>
+            <p>Tres años de experiencia en el diseño publicitario <br>Actual enfoque en el diseño y desarrollo web.</p>
         </div>
     </div>
 </section>
@@ -329,6 +329,10 @@ import Layout from "../components/Layout.astro"
     gap: 10vw;
     margin: 5vh 0;
 }
+.tarjeta-miembro img{
+    border-radius: 16px;
+    filter: saturate(20%);
+}
 .tarjeta-miembro{
     width: 20rem;
     border-radius: 16px;
@@ -345,6 +349,8 @@ import Layout from "../components/Layout.astro"
 }
 .tarjeta-miembro img{
     width: 100%;
+    height: 30rem;
+    object-fit: cover;
     display: block;
 }
 

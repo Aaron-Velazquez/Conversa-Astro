@@ -1,0 +1,1 @@
+import"./hoisted.Da2Z1H-1.js";const t=document.getElementById("ver_plantillas"),e=document.getElementById("plantillas");console.log(e,t);t?.addEventListener("click",()=>{e?.scrollIntoView({behavior:"smooth",block:"start",inline:"nearest"})});

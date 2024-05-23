@@ -100,7 +100,8 @@
         list-style:disc;
     }
     .plantillas-container{
-        width: 80rem;
+        border: #000 solid 1px;
+        width: 90vw;
         margin: auto;
         color: #1C1C1C;
     }
@@ -128,21 +129,21 @@
         cursor: pointer;
     }
     .linea-precios{
-        width: 80rem;
+        width: 90vw;
         margin: auto; 
         border: #1C1C1C solid 1px;
         height: 1px;
     }
     .plantillas-img figure:hover{
-        width: 35rem;
-        height: 29rem;
+        width: 33rem;
+        height: 27rem;
         cursor: pointer;
         box-shadow: 2px 2px 2px #00000086;
     }
     .plantillas-img figure{
         border-radius: 16px;
-        width: 33rem;
-        height: 27rem;
+        width: 30rem;
+        height: 24rem;
     }
     .plantillas-img figure img{
         border-radius: 16px;
