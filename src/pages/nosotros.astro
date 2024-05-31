@@ -1,7 +1,7 @@
 ---
 import Layout from "../components/Layout.astro"
 ---
-<Layout>
+<Layout title="Nosotros">
     <div class="nosotros-bg">
         <main>
             <div class="nosotros-text">
@@ -57,8 +57,7 @@ import Layout from "../components/Layout.astro"
     <!-- Sección Diseño -->
 
     <section class="design">
-        <div class="design-container">mr
-            +
+        <div class="design-container">
             <div class="design-text">
                 <div class="text">
                     <h3>Una aplicación moderna al diseño.</h3>
@@ -107,7 +106,6 @@ import Layout from "../components/Layout.astro"
     /* Sección header */
 
     .nosotros-text{
-        /* width: 30rem; */
         font-size: 1.2rem;
         color: #E2F3FF;
     }
@@ -307,10 +305,6 @@ import Layout from "../components/Layout.astro"
     width: 20rem;
 }
 
-/* Sección Servicios */
-
-
-
 /* Sección nuestros miembros*/
 
 .nuestros-miembros{
@@ -355,18 +349,15 @@ import Layout from "../components/Layout.astro"
 }
 
 @media screen and (max-width: 800px){
-    .img-1{
-        display: none;
-    }
-    .img-2{
-        width: 13rem;
-    }
+
     .nosotros-text h1{
-        font-size: 1.8rem;
+        font-size: 2.4rem;
         margin: 1.5vh;
     }
     .nosotros-text{
+        text-align: center;
         width: 80vw;
+        font-size: .95rem;
     }
     .Sobre-Nosotros{
         width: 80vw;
@@ -374,6 +365,12 @@ import Layout from "../components/Layout.astro"
     }
     .Sobre-Nosotros-text{
         width: 100%;
+    }
+    main{
+        height: 40vh;
+    }
+    main figure{
+        display: none;
     }
     .Sobre-Nosotros-text span{
         font-size: .95rem;
@@ -395,7 +392,7 @@ import Layout from "../components/Layout.astro"
         font-size: .95rem;
     }
     .Que-Hacemos-text h3{
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
 
 

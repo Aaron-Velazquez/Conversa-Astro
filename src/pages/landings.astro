@@ -6,7 +6,7 @@ import Plantillas from "../components/pageSelector.vue"
 
 ---
 
-<Layout>
+<Layout title="Plantillas">
     <div class="landings-background">
         <main class="hero__landings">
             <div class="hero__text">
@@ -24,7 +24,9 @@ import Plantillas from "../components/pageSelector.vue"
     </div>
     <Stats id="seo"></Stats>
     <Ventajas></Ventajas>
-    <Plantillas id="plantillas" client:load></Plantillas>
+    <section id="plantillas">
+        <Plantillas id="plantillas" client:load></Plantillas>
+    </section>
 </Layout>
 
 <style>
@@ -121,10 +123,13 @@ h1{
 </style>
 
 <script>
-    const button = document.getElementById('ver_plantillas');
-    const div = document.getElementById('plantillas');
-    console.log(div, button);
-    button?.addEventListener('click', ()=>{
-            div?.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
-        })
+    const scrollButton = document.getElementById("ver_plantillas");
+    console.log(scrollButton);
+
+    scrollButton?.addEventListener("click", function() {
+        const section = document.getElementById("plantillas");
+        section?.scrollIntoView({ behavior: 'smooth' });
+        console.log(section);
+    });
+
 </script>

@@ -58,7 +58,7 @@ function clear(){
                     </span>
                     <span>Leemos tus mensajes en redes sociales.</span>
                     <figure>
-                        <!-- <img src="./img/social-instagram.svg" alt="instagram"><img src="./img/social-facebook.svg" alt="facebok"><img src="./img/social-whatsapp.svg" alt="whatsapp"> -->
+                        <img src="./img/social-instagram.svg" alt="instagram"><img src="./img/social-facebook.svg" alt="facebok"><img src="./img/social-whatsapp.svg" alt="whatsapp"> 
                     </figure>
                 </div>
             </div>

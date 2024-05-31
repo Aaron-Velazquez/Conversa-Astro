@@ -10,7 +10,7 @@ import Eleginos from "../components/eleginos.astro"
 
 ---
 
-<Layout>
+<Layout title="Desarrollo Web en Paraguay">
     <main class="main__container">
         <div class="main__header">
             <div class="hero__text">
@@ -240,24 +240,23 @@ import Eleginos from "../components/eleginos.astro"
         flex-direction: column;
     }
     .hero__text button{
-        padding: 1rem;
+        order: 2;
+        padding: .8rem;
         width: 10rem;
-        font-size: 1rem;
-        margin: 2rem auto;
+        font-size: 0.9rem;
+        margin: 1rem auto 2rem auto;
     }
     .hero__text :last-child(){
-        display: none;
-    }
-    .main__header .hero__text :first-child(){
-        font-size: 1.2rem;
-        margin: 0;
-    }
-    .main__header h1{
-        font-size: 1.8rem;
-    }
-    .main__header p{
+        width: 100%;
+        order: 1;
         font-size: 1rem;
-        margin: 0;
+    }
+    .main__header h1, .main__header h1 b{
+        font-size: 2.4rem;
+        order: 0;
+    }
+    .main__header h1 b{
+        text-shadow: 4px 0 #3A71FF;
     }
 
     /* Sección introducción*/

@@ -33,7 +33,7 @@
         const display = document.querySelector(".detalles");
         display.classList.remove("none");
         display.innerHTML = `
-        <img src="../../public/img/equis.svg" class="salir" alt="X">
+        <img src="./img/equis.svg" class="salir" alt="X">
         <figure class="webImg">
             <img src="${image}" alt="Página web">
             </figure>` 
@@ -66,9 +66,9 @@
     <div class="choose">
         <h3>Algunas de nuestras plantillas</h3>
         <div class="prices">
-            <span class="selected" @click="planPicker(planOn= 'basic')">300 mil</span>
-            <span @click="planPicker(planOn= 'Med')">500 mil</span>
-            <span @click="planPicker(planOn= 'Av')">1 Millón</span>
+            <span class="selected" @click="planPicker(planOn= 'basic')">330.000 Gs</span>
+            <span @click="planPicker(planOn= 'Med')">550.000 Gs</span>
+            <span @click="planPicker(planOn= 'Av')">1.100.000 Gs</span>
         </div>
         <div class="linea-precios"></div>
     </div>
@@ -239,6 +239,22 @@
     }
     .pres-text{
         margin: 0;
+    }
+    .webImg{
+        margin: 2vh auto;
+        width: 95vw;
+        overflow: auto;
+    }
+    .salir{
+        margin-top: 2vh;
+        transform: translateX(0);
+        right: 1rem;
+        width: 1rem;
+    }
+    .plantillas-img figure:hover{
+        border-radius: 16px;
+        width: auto;
+        height: auto;
     }
     }
 </style>

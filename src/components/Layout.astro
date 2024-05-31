@@ -1,5 +1,7 @@
 ---
 
+import { SEO } from "astro-seo";
+
 interface Props {
     title?: string;
 }
@@ -8,13 +10,61 @@ const { title } = Astro.props;
 
 ---
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conversa | {title}</title>
     <link rel="icon" type="image/x-icon" href="./img/favicon-conver.png">
-    <!-- <link rel="icon" type="image/x-icon" href="./img/favicon-conversa.svg"> -->
+
+    <SEO
+    title={title}
+    description="Desarrollamos la Web que tu empresa necesita, optimizada para aumentar la conversión y enfocada en enriquecer la experiencia del usuario"
+    openGraph={
+        {
+            basic: {
+                title: "Conversa | Desarrollo Web en Paraguay",
+                type: "Website",
+                image: "./img/conversa-logo.jpg"
+            }
+        }
+    }
+    />
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "Conversa",
+            "url": "https://conversa.com.py/",
+            "sameAs": [
+                "www.facebook.com/61553693372809",
+                "instagram.com/conversa_py"
+            ]
+        }</script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://conversa.com.py/",
+            "logo": "./img/conversa-logo.jpg",
+            "contactPoint": [
+                {
+                    "@type": "ContactPoint",
+                    "telephone": "+595 973 236 438",
+                    "contactType": "sales",
+                    "areaServed": "PY",
+                    "contactOption": "Toll",
+                    "availableLanguage": "Spanish"
+                }
+            ]
+        }</script>
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "url": "https://conversa.com.py/",
+            "logo": "./img/conversa-logo.jpg"
+        }</script>
 </head>
 <body>
     <main>
@@ -23,11 +73,10 @@ const { title } = Astro.props;
                 <span class="logo" onclick="window.location.href = './';">
                     Conversa
                 </span>
-                <!-- <li>Desarrollo</li> -->
                 <li onclick="window.location.href = './landings';">Landings</li>
                 <li onclick="window.location.href = './soporte';">Soporte</li>
                 <li onclick="window.location.href = './nosotros';">Nosotros</li>
-                <li onclick="window.location.href = './planes';">Presupuesto</li>
+                <li onclick="window.location.href = './planes';">Planes</li>
             </div>
             <div class="contacto">
                 <span onclick="window.location.href = './contacto';">Contactanos</span>
@@ -36,10 +85,10 @@ const { title } = Astro.props;
             </div>
         </nav>
         <div class="menu-mobile onScreen">
-        <span id="Desarrollo">Desarrollo</span>
-        <span id="Plantillas">Plantillas</span>
-        <span id="Soporte">Soporte</span>
-        <span id="Nosotros">Nosotros</span>
+            <span id="Plantillas">Plantillas</span>
+            <span id="Desarrollo">Planes</span>
+            <span id="Soporte">Soporte</span>
+            <span id="Nosotros">Nosotros</span>
         <span id="Contacto">Contacto</span>
         </div>
         <slot></slot>
@@ -50,41 +99,41 @@ const { title } = Astro.props;
             <div class="footer_sections">
                 <div class="footer-section">
                     <span class="foot_titulo">Nosotros</span>
-                    <li>Términos y condiciones</li>
-                    <li>Presupuestos</li>
-                    <li>Contacto</li>
-                    <li>Quienes Somos</li>
+                    <!-- <li>Términos y condiciones</li> -->
+                    <li onclick="window.location.href = './planes';">Planes</li>
+                    <li onclick="window.location.href = './contacto';">Contacto</li>
+                    <li onclick="window.location.href = './nosotros';">Quienes Somos</li>
                 </div>
-                <div class="footer-section">
+                <!-- <div class="footer-section">
                     <span class="foot_titulo">Casos de Uso</span>
                     <li>Restaurantes</li>
                     <li>Gimnasios</li>
                     <li>Portafolios</li>
                     <li>Seguros</li>
-                </div>
+                </div> -->
                 <div class="footer-section">
                     <span class="bolder">E-Mail</span>
-                    <li>social@conversa.com.py</li>
+                    <li onclick="window.location.href = 'mailto:social@conversa.com.py';">social@conversa.com.py</li>
                     <span class="bolder">Teléfono</span>
-                    <li id="tel">+595 973236438</li>
+                    <li id="tel" onclick="window.location.href = 'tel:+595973236438'">+595 973236438</li>
                 </div>
             </div>
             <div class="line">
             </div>
             <div class="social-icons">
-                <div class="social-icon">
+                <div class="social-icon" onclick="window.location.href = 'tel:+595973236438'">
                     <figure>
                         <img src="./img/instagram.svg" alt="Instagram">
                     </figure>
                     <span>Instagram</span>
                 </div>
-                <div class="social-icon">
+                <div class="social-icon" onclick="window.location.href = 'https://www.instagram.com/conversa_py?igsh=Znh6OHI3NnJ6ajk4'">
                     <figure>
                         <img src="./img/facebook.svg" alt="Facebook">
                     </figure>
                     <span>Facebook</span>
                 </div>
-                <div class="social-icon">
+                <div class="social-icon" onclick="window.open('https://api.whatsapp.com/send?phone=+595973236438&text=Buenas%2C+estoy+interesado+en+una+landing+page+personalizada', '_blank');">
                     <figure>
                         <img src="./img/whatsapp.svg" alt="Whatsapp">
                     </figure>

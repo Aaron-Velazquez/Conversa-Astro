@@ -8,4 +8,7 @@ export default defineConfig({
   integrations: [vue()],
   output: 'static',
   adapter: netlify(),
+  build: {
+    format: 'file',
+  }
 });
