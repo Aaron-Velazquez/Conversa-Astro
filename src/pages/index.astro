@@ -10,7 +10,7 @@ import Eleginos from "../components/eleginos.astro"
 
 ---
 
-<Layout title="Desarrollo Web en Paraguay">
+<Layout title="Desarrollo Web en Paraguay" url="https://conversa.com.py">
     <main class="main__container">
         <div class="main__header">
             <div class="hero__text">
@@ -47,25 +47,12 @@ import Eleginos from "../components/eleginos.astro"
             </div>
     </div>
     </section>
-
-    <!-- Sección características -->
     
     <Tarjetas></Tarjetas>
     <Seguridad></Seguridad>
-
-    <!-- Sección Ventajas -->
-
-    <!-- <seccion class="seccion__ventajas">
-        <div class="mensaje">
-            <h3>La conexión con el cliente se construye a través de la <b>comunicación</b></h3>
-            <p>La información concisa de una página web permite a tu cliente entender con mayor facilidad <b>el mensaje que buscas que reciba.</b></p>
-        </div> -->
         <Eleginos>
 
         </Eleginos>
-        <!-- <Ventajas>
-
-        </Ventajas> -->
     </seccion>
     
     <Ofertas></Ofertas>
@@ -76,11 +63,6 @@ import Eleginos from "../components/eleginos.astro"
 </Layout>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Hubballi&display=swap');
-    :root{
-        --light-cian: #97E9FF;
-        --span-font: 'Hubballi', sans-serif;
-    }
 *{
     margin: 0;
     padding: 0;
@@ -105,7 +87,7 @@ import Eleginos from "../components/eleginos.astro"
     .hero__text button{
         display: block;
         color: #fff;
-        background: #3A71FF;
+        background: #0047FF;
         border: none;
         padding: 1.2rem;
         margin: 2.5rem 0;
@@ -135,7 +117,7 @@ import Eleginos from "../components/eleginos.astro"
     }
     .main__header h1 b{
         display: inline;
-        text-shadow: 8px 0 #3A71FF;
+        text-shadow: 8px 0 #0047FF;
     }
     .hero__text :last-child{
         width: 50%;
@@ -175,7 +157,7 @@ import Eleginos from "../components/eleginos.astro"
     gap: 3vh;
 }
 .seccion__introduccion p{
-    color: #7C7A7A;
+    color: #333;
     font-size: 1.1rem;
     width: 70%;
 }

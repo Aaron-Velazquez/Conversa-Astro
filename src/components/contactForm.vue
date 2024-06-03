@@ -50,7 +50,7 @@ function clear(){
                 <div class="call-us">
                     <span class="title">Llámanos</span>
                     <span>Te atendemos en horario de oficina.</span>
-                    <span>(0973) 236-438</span>
+                    <span onclick="window.location.href = 'tel:+595973236438'">(0973) 236-438</span>
                 </div>
                 <div class="social-media">
                     <span class="title">
@@ -58,7 +58,7 @@ function clear(){
                     </span>
                     <span>Leemos tus mensajes en redes sociales.</span>
                     <figure>
-                        <img src="./img/social-instagram.svg" alt="instagram"><img src="./img/social-facebook.svg" alt="facebok"><img src="./img/social-whatsapp.svg" alt="whatsapp"> 
+                        <img src="https://conversa.com.py/img/social-instagram.svg" alt="instagram" onclick="window.location.href = 'https://www.instagram.com/conversa_py?igsh=Znh6OHI3NnJ6ajk4'"><img src="https://conversa.com.py/img/social-facebook.svg" alt="facebok" onclick="window.location.href = 'https://www.facebook.com/61553693372809'"><img src="https://conversa.com.py/img/social-whatsapp.svg" alt="whatsapp" onclick="window.open('https://api.whatsapp.com/send?phone=+595973236438&text=Buenas%2C+estoy+interesado+en+una+landing+page+personalizada', '_blank');"> 
                     </figure>
                 </div>
             </div>
