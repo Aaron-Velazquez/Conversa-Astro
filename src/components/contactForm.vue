@@ -2,6 +2,7 @@
 import { ref } from "vue";
 
 const responseMessage = ref('');
+const showForm = ref(true);
 
 async function submit(e){
     e.preventDefault();
@@ -15,6 +16,7 @@ async function submit(e){
     responseMessage.value = data.message;
 }
 function clear(){
+    showForm.value = false;
     document.getElementById("nombre").value = "";
     document.getElementById("apellido").value = "";
     document.getElementById("correo").value = "";
@@ -28,7 +30,7 @@ function clear(){
             <span>Atendemos tu solicitud lo antes posible.</span>
         </div>
         <div class="contacto-row">
-            <form class="contactForm" @submit="submit">
+            <form class="contactForm" @submit="submit" v-if="showForm">
                 <div class="form-row">
                     <div class="form-column">
                         <label>Nombre</label>
@@ -45,6 +47,9 @@ function clear(){
                 <textarea class="textArea" type="text" name="mensaje" required/>
                 <input type="submit" value="Enviar">
             </form>
+            <div class="enviado" v-if="showForm == false">
+                <span>¡Su mensaje ha sido enviado!</span>
+            </div>
             <div class="linea"></div>
             <div class="side-form">
                 <div class="call-us">
@@ -103,6 +108,11 @@ function clear(){
 }
 .formulario-de-contacto form > *{
     margin: 1vh 0;
+}
+.enviado span{
+    margin: 6vh 0;
+    font-size: 2rem;
+    font-weight: 500;
 }
 .formulario-de-contacto form > input[type="text"], .formulario-de-contacto form > input[type="email"] , .form-column input{
     padding: 1vh 0;
