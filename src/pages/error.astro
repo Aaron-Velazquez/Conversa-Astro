@@ -1,0 +1,66 @@
+---
+import Layout from "../components/Layout.astro";
+---
+
+<Layout>
+    <div class="main-container">
+        <div class="main-text">
+            <h1>404</h1>
+            <span>Ups, parece que algo fue mal</span>
+            <p>La página que estás buscando no existe, o tal vez ha sido movida a otro lugar.</p>
+            <p>Vuelve a nuestra <a href="./">página principal</a> e inicia desde allí.</p>
+        </div>
+    </div>
+</Layout>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    .main-container{
+        width: 100%;
+        background: #161935;
+    }
+    .main-text{
+        padding: 1px;
+        text-align: center;
+        color: #fff;
+        /* border: #fff solid 1px; */
+        width: 70vw;
+        margin: auto;
+    }
+    .main-text > * {
+        margin: 3vh 0;
+    }
+    .main-text h1{
+        font-size: 12.5rem;
+        text-shadow: 8px 6px 2px #0047FF;
+    }
+    .main-text span{
+        font-size: 4.5rem;
+        font-weight: 700;
+    }
+    .main-text p{
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+    .main-text a{
+        color: #0047FF;
+        text-emphasis: none;
+    }
+    .main-text:last-child{
+        padding-bottom: 10vh;
+    }
+    @media screen and (max-width: 1000px) {
+        .main-text{
+            width: 95vw;
+        }
+        .main-text h1{
+            font-size: 6.5rem;
+        }
+        .main-text span{
+            font-size: 2rem;
+        }    
+    }
+</style>
