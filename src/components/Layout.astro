@@ -103,8 +103,10 @@ const { title, url, descripcion } = Astro.props;
                 <ul class="footer-section">
                     <span class="foot_titulo">Nosotros</span>
                     <!-- <li>Términos y condiciones</li> -->
+                    <li onclick="window.location.href = './plantillas';">Plantillas</li>
                     <li onclick="window.location.href = './planes';">Planes</li>
                     <li onclick="window.location.href = './nosotros';">Quienes Somos</li>
+                    <li onclick="window.location.href = './soporte';">Soporte</li>
                 </ul>
                 <!-- <div class="footer-section">
                     <span class="foot_titulo">Casos de Uso</span>
@@ -326,7 +328,6 @@ const { title, url, descripcion } = Astro.props;
     const Plantillas = document.getElementById("Plantillas") as HTMLLIElement;
     const Soporte = document.getElementById("Soporte") as HTMLLIElement;
     const Nosotros = document.getElementById("Nosotros") as HTMLLIElement;
-    const Contacto = document.getElementById("Contacto") as HTMLLIElement;
 
     Desarrollo.addEventListener("click", ()=>{
         window.location.href= "./planes"
@@ -342,11 +343,6 @@ const { title, url, descripcion } = Astro.props;
     
     Nosotros.addEventListener("click", ()=>{
         window.location.href= "./nosotros"
-    })
-
-    
-    Contacto.addEventListener("click", ()=>{
-        window.location.href= "./contacto"
     })
 
     hamburger.addEventListener("click",
