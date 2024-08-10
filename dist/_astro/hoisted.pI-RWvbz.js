@@ -1,0 +1,1 @@
+import"./hoisted.DpDrfqmN.js";const t=document.getElementById("ver_plantillas");console.log(t);t?.addEventListener("click",function(){const o=document.getElementById("plantillas");o?.scrollIntoView({behavior:"smooth"}),console.log(o)});
