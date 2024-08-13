@@ -20,7 +20,7 @@ const { title, url, descripcion } = Astro.props;
     <link rel="icon" type="image/x-icon" href="./img/favicon-conver.png">
 
     <SEO
-    description="Descubre soluciones innovadoras de desarrollo web en Paraguay. Ofrecemos diseño web, desarrollo de aplicaciones y optimización SEO para impulsar tu negocio online. Contáctanos hoy para crear tu presencia digital."
+    description={descripcion}
     openGraph={
         {
             basic: {
@@ -30,7 +30,7 @@ const { title, url, descripcion } = Astro.props;
             }
         }
     }
-    canonical="https://conversa.com.py"
+    canonical= {url}
     />
     <script type="application/ld+json">
         {
