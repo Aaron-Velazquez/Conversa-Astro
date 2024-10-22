@@ -23,7 +23,7 @@
                 items[c].classList.add("selected");
                 sw=1;
             }else{
-                item.classList.remove("selected")
+                item.classList.remove("selected");
             }
             c=c+1;
         })
